@@ -109,17 +109,25 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
 }
 
-/* Project Card Hover Scale */
-.project-card {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+/* Mini Case Study Card Styles */
+.case-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
 }
-.project-card:hover {
+.case-card:hover {
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(60, 134, 255, 0.25);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.8), 0 0 35px -10px rgba(60, 134, 255, 0.2);
 }
 
-/* Modals */
+/* Problem & Solution Mini Blocks */
+.mini-cs-block {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+/* Modal Open */
 .modal-open {
   opacity: 1 !important;
   pointer-events: auto !important;
