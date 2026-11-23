@@ -1,4 +1,4 @@
-/* Shubham Dharaviya (Sobom) — Personal Portfolio Stylesheet */
+/* Shubham Dharaviya (Sobom) — Personal Portfolio Stylesheet v2.0 */
 
 /* Noise Background Overlay */
 .noise-overlay {
@@ -109,7 +109,7 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
 }
 
-/* Mini Case Study Card Styles */
+/* Case Study Cards */
 .case-card {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
 }
@@ -131,4 +131,157 @@
 .modal-open {
   opacity: 1 !important;
   pointer-events: auto !important;
+}
+
+/* Line Clamp Utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Process Step Timeline Animation */
+.process-step {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Research Item Bullets */
+.research-item {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+.research-item:last-child {
+  border-bottom: none;
+}
+
+/* Skills Bar Animations */
+.skill-bar {
+  position: relative;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #145bff, #8B5CF6);
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 0%;
+}
+.skill-bar-fill.animate-visible {
+  width: var(--skill-width);
+}
+
+/* Experience Timeline */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #145bff, #8B5CF6);
+  box-shadow: 0 0 12px rgba(20, 91, 255, 0.4);
+}
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 24px;
+  width: 2px;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.08);
+}
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* Scroll-Triggered Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Animation Delays */
+.animate-delay-1 { transition-delay: 0.1s; }
+.animate-delay-2 { transition-delay: 0.2s; }
+.animate-delay-3 { transition-delay: 0.3s; }
+.animate-delay-4 { transition-delay: 0.4s; }
+
+/* Stat Counter Cards */
+.stat-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.stat-card:hover {
+  border-color: rgba(20, 91, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+  transition: border-color 0.3s ease;
+}
+.testimonial-card:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Modal Scrollbar */
+#caseStudyModal > div::-webkit-scrollbar {
+  width: 6px;
+}
+#caseStudyModal > div::-webkit-scrollbar-track {
+  background: transparent;
+}
+#caseStudyModal > div::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+#caseStudyModal > div::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth section scroll offset for sticky header */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+  outline: 2px solid #145bff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(20, 91, 255, 0.4);
+  color: white;
 }

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactile Mobile Ergonomics & Gesture Flow — Case Study by Shubham Dharaviya (Sobom)</title>
+  <meta name="description" content="One-Thumb Usability, Bottom Sheets, Spring Physics & Micro-Interactions. Detailed product design case study examining research, architecture, and measurable outcomes.">
+  
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Tactile Mobile Ergonomics & Gesture Flow — Case Study">
+  <meta property="og:description" content="One-Thumb Usability, Bottom Sheets, Spring Physics & Micro-Interactions">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Syne"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              300: '#7eb1ff',
+              400: '#3c86ff',
+              500: '#145bff',
+              accent: '#00F0FF',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-[#07080B] text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Background Orbs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <!-- Ambient Cursor Follower -->
+  <div id="ambientCursor" class="ambient-cursor pointer-events-none hidden md:block"></div>
+
+  <!-- Top Bar -->
+  <div class="relative z-50 bg-[#090b11]/80 border-b border-white/5 py-2.5 px-4 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between text-xs">
+      <a href="../index.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
+        <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i>
+        <span class="font-medium">Back to Portfolio</span>
+      </a>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span class="font-mono text-brand-300">Figma Prototype · Node 2602-39</span>
+        <span class="text-slate-600">|</span>
+        <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">
+          <span>Resume PDF</span>
+          <i data-lucide="external-link" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-[#07080B]/90 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between py-4">
+      <a href="../index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-indigo-500 p-[1px]">
+          <div class="w-full h-full bg-[#090b11] rounded-[11px] flex items-center justify-center font-display font-black text-white group-hover:scale-105 transition-transform">
+            S
+          </div>
+        </div>
+        <div>
+          <span class="font-display font-bold text-white text-base group-hover:text-brand-300 transition-colors">Shubham Dharaviya</span>
+          <span class="block text-[11px] text-slate-400 font-mono">Product & UI/UX Designer</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=2601%3A16114&node-id=2602-39&viewport=1044%2C446%2C0.08&t=wTkVOeGBxzJSc3Xe-1&scaling=contain&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all flex items-center gap-1.5 shadow-md">
+          <span>Test Mobile Gesture Flow</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 space-y-16">
+
+    <!-- Breadcrumb & Header Hero -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-2 flex-wrap text-xs font-mono">
+        <a href="../index.html" class="text-slate-400 hover:text-white">Home</a>
+        <span class="text-slate-600">/</span>
+        <a href="../index.html#case-studies" class="text-slate-400 hover:text-white">Case Studies</a>
+        <span class="text-slate-600">/</span>
+        <span class="text-brand-300">Tactile Mobile Ergonomics & Gesture Flow</span>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
+        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+        <span>FIGMA PROTOTYPE (2602-39)</span>
+      </div>
+
+      <h1 class="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
+        Tactile Mobile Ergonomics & Gesture Flow
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal">
+        One-Thumb Usability, Bottom Sheets, Spring Physics & Micro-Interactions
+      </p>
+
+      <!-- Project Metadata Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-3xl bg-white/[0.02] border border-white/10">
+        <div>
+          <div class="text-[11px] font-mono text-slate-500 uppercase">Role</div>
+          <div class="text-sm text-white font-semibold mt-1">Mobile Interaction Designer</div>
+        </div>
+        <div>
+          <div class="text-[11px] font-mono text-slate-500 uppercase">Timeline</div>
+          <div class="text-sm text-white font-semibold mt-1">Prototype Sprint (2023)</div>
+        </div>
+        <div>
+          <div class="text-[11px] font-mono text-slate-500 uppercase">Client / Domain</div>
+          <div class="text-sm text-white font-semibold mt-1">Mobile Interaction Lab</div>
+        </div>
+        <div>
+          <div class="text-[11px] font-mono text-slate-500 uppercase">Team</div>
+          <div class="text-sm text-white font-semibold mt-1">Solo Designer (Research & Design)</div>
+        </div>
+      </div>
+
+      <!-- Tools Used -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-xs font-mono text-slate-500 uppercase mr-2">Tools:</span>
+        <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-300">Figma</span><span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-300">Smart Animate</span><span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-300">Principle</span><span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-300">DeviceMotion API Research</span>
+      </div>
+    </div>
+
+    <!-- Hero Image Banner with Direct Action -->
+    <div class="relative rounded-3xl overflow-hidden aspect-[16/9] border border-white/10 bg-slate-900 shadow-2xl">
+      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80" alt="Tactile Mobile Ergonomics & Gesture Flow" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-brand-300 font-bold bg-black/60 px-3 py-1 rounded-full backdrop-blur-md border border-brand-500/30">
+            60fps Figma Motion — Tactile Smart Animate States
+          </span>
+        </div>
+        <a href="https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=2601%3A16114&node-id=2602-39&viewport=1044%2C446%2C0.08&t=wTkVOeGBxzJSc3Xe-1&scaling=contain&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-2xl bg-white text-slate-950 font-bold text-sm hover:bg-slate-200 transition-all flex items-center gap-2 shadow-2xl">
+          <span>Test Mobile Gesture Flow</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="space-y-4">
+      <h2 class="font-display font-bold text-xl text-white flex items-center gap-2">
+        <i data-lucide="bar-chart-3" class="w-5 h-5 text-emerald-400"></i>
+        Measurable Impact & Key Results
+      </h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        
+    <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-brand-500/30 transition-all">
+      <div class="text-3xl font-display font-black text-brand-300">0%</div>
+      <div class="text-xs font-bold text-white mt-1">Tap Miss Rate</div>
+      <div class="text-[11px] text-slate-500 mt-0.5 font-mono">With 52px+ targets</div>
+    </div>
+  
+    <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-brand-500/30 transition-all">
+      <div class="text-3xl font-display font-black text-brand-300">100%</div>
+      <div class="text-xs font-bold text-white mt-1">Flow Completion</div>
+      <div class="text-[11px] text-slate-500 mt-0.5 font-mono">Single-hand usage</div>
+    </div>
+  
+    <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-brand-500/30 transition-all">
+      <div class="text-3xl font-display font-black text-brand-300">40+</div>
+      <div class="text-xs font-bold text-white mt-1">Interactive States</div>
+      <div class="text-[11px] text-slate-500 mt-0.5 font-mono">In Figma prototype</div>
+    </div>
+  
+    <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-brand-500/30 transition-all">
+      <div class="text-3xl font-display font-black text-brand-300">60fps</div>
+      <div class="text-xs font-bold text-white mt-1">Animation FPS</div>
+      <div class="text-[11px] text-slate-500 mt-0.5 font-mono">Spring physics in Smart Animate</div>
+    </div>
+  
+      </div>
+    </div>
+
+    <!-- Section: Context & Background -->
+    <section class="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-4">
+      <div class="flex items-center gap-2 text-blue-400 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="info" class="w-4 h-4"></i>
+        <span>Project Context & Background</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl text-white">Why This Project Existed</h2>
+      <p class="text-base text-slate-300 leading-relaxed">Modern smartphones have grown to 6.1"–6.9" displays, yet the dominant UI paradigm still places primary navigation and actions in the top 30% of the screen — the hardest area to reach with one hand. This research project explored how mobile interfaces can be redesigned around natural thumb ergonomics, using bottom-anchored interaction patterns, gesture-driven navigation, and spring physics animations that provide tactile feedback in a digital medium.</p>
+    </section>
+
+    <!-- Section: The Challenge -->
+    <section class="p-8 rounded-3xl bg-amber-950/10 border border-amber-500/20 space-y-4">
+      <div class="flex items-center gap-2 text-amber-400 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+        <span>The Problem Statement</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl text-white">Friction & Roadblocks Faced by Users</h2>
+      <p class="text-base text-slate-300 leading-relaxed">Three critical problems with current mobile UX: (1) 'Thumb gymnastics' — users contort their hands to reach top-placed navigation bars, increasing device drop risk and causing hand fatigue during extended use. (2) 'Tap ambiguity' — small touch targets in dense UIs cause frequent mis-taps, especially in motion (walking, transit). (3) 'Dead animation' — most UI transitions use linear easing that feels robotic and disconnected from physical reality. Users subconsciously expect digital objects to behave with the physics of real objects (momentum, spring, friction).</p>
+    </section>
+
+    <!-- Section: Research Methodology -->
+    <section class="space-y-6">
+      <div class="flex items-center gap-2 text-brand-400 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="compass" class="w-4 h-4"></i>
+        <span>Research & Discovery</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">How We Listened to the User</h2>
+      <div class="space-y-4">
+        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex gap-3 items-start"><span class="text-brand-400 font-bold mt-0.5 shrink-0">▸</span><span class="text-sm text-slate-300 leading-relaxed">Thumb-Reach Heatmap Study: Mapped the natural thumb reach zones on 6.1" (iPhone 14) and 6.7" (iPhone 14 Plus) displays. Created a heat map categorizing screen areas as Easy (bottom 40%), Stretch (middle 30%), and Hard (top 30%). Found that 72% of smartphone users operate one-handed in real contexts.</span></div><div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex gap-3 items-start"><span class="text-brand-400 font-bold mt-0.5 shrink-0">▸</span><span class="text-sm text-slate-300 leading-relaxed">Tap Target Size Testing: Conducted a rapid-fire tap accuracy test with 10 participants using targets ranging from 32px to 64px. Results: 32px targets had a 23% miss rate, 44px targets had 8%, and 52px+ targets had <2% miss rate. Sweaty conditions (post-exercise) increased miss rates by 40%.</span></div><div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex gap-3 items-start"><span class="text-brand-400 font-bold mt-0.5 shrink-0">▸</span><span class="text-sm text-slate-300 leading-relaxed">Animation Perception Study: Showed participants 3 versions of the same UI transition: linear easing, ease-in-out, and spring physics (damping: 0.7, stiffness: 300). Spring physics consistently rated highest for 'feeling natural' and 'responsive.' Participants described linear easing as 'robotic' and 'laggy' even when objectively faster.</span></div><div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex gap-3 items-start"><span class="text-brand-400 font-bold mt-0.5 shrink-0">▸</span><span class="text-sm text-slate-300 leading-relaxed">Competitive Gesture Analysis: Deconstructed gesture interaction patterns from Apple Maps (bottom sheet), Spotify (swipe-to-queue), and Telegram (long-press reactions). Identified 8 gesture patterns that users already understand intuitively.</span></div>
+      </div>
+    </section>
+
+    <!-- Section: Design Process Timeline -->
+    <section class="space-y-6">
+      <div class="flex items-center gap-2 text-purple-400 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="git-branch" class="w-4 h-4"></i>
+        <span>Step-by-Step Architecture</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">The Design & Iteration Process</h2>
+      <div class="pt-2">
+        
+    <div class="relative pl-8 pb-8 border-l-2 border-white/10 ml-3">
+      <div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-brand-500/20 border-2 border-brand-500 flex items-center justify-center">
+        <i data-lucide="hand" class="w-3 h-3 text-brand-400"></i>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-brand-500/20 transition-all">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-display font-bold text-white text-base">Ergonomic Research</h4>
+          <span class="text-xs font-mono text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded-full">Sprint 1</span>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Built thumb-reach heatmaps for 3 device sizes (5.4", 6.1", 6.7"). Identified the 'comfort zone' — bottom 40% of screen where primary actions should live. Defined minimum tap target sizes for different contexts: 44px (stationary), 48px (walking), 52px (sweaty/active).</p>
+      </div>
+    </div>
+  
+    <div class="relative pl-8 pb-8 border-l-2 border-white/10 ml-3">
+      <div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-brand-500/20 border-2 border-brand-500 flex items-center justify-center">
+        <i data-lucide="move" class="w-3 h-3 text-brand-400"></i>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-brand-500/20 transition-all">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-display font-bold text-white text-base">Gesture Library Design</h4>
+          <span class="text-xs font-mono text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded-full">Sprint 2</span>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Designed a gesture vocabulary of 8 interactions: tap, long-press, swipe-horizontal, swipe-vertical, pull-down-to-refresh, bottom-sheet-drag, pinch-zoom, and double-tap-zoom. Each gesture has a defined trigger zone, haptic feedback pattern, and reversibility mechanism.</p>
+      </div>
+    </div>
+  
+    <div class="relative pl-8 pb-8 border-l-2 border-white/10 ml-3">
+      <div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-brand-500/20 border-2 border-brand-500 flex items-center justify-center">
+        <i data-lucide="zap" class="w-3 h-3 text-brand-400"></i>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-brand-500/20 transition-all">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-display font-bold text-white text-base">Spring Physics Animation</h4>
+          <span class="text-xs font-mono text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded-full">Sprint 3</span>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Built all transitions using spring-based easing curves in Figma Smart Animate. Tuned damping (0.65–0.8) and stiffness (200–400) values to match iOS native feel. Created overshoot animations for bottom sheet snapping that provide satisfying 'click into place' feedback.</p>
+      </div>
+    </div>
+  
+    <div class="relative pl-8 pb-8  ml-3">
+      <div class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-brand-500/20 border-2 border-brand-500 flex items-center justify-center">
+        <i data-lucide="smartphone" class="w-3 h-3 text-brand-400"></i>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-brand-500/20 transition-all">
+        <div class="flex items-center justify-between mb-2">
+          <h4 class="font-display font-bold text-white text-base">Interactive Prototype</h4>
+          <span class="text-xs font-mono text-brand-400 bg-brand-500/10 px-2.5 py-0.5 rounded-full">Sprint 4</span>
+        </div>
+        <p class="text-sm text-slate-300 leading-relaxed">Assembled the complete prototype with 40+ interactive states. Every screen demonstrates bottom-anchored navigation, gesture-driven content browsing, and spring-animated transitions. Added micro-interactions: button press states (scale 0.95 + shadow reduction), loading shimmer effects, and success state celebrations.</p>
+      </div>
+    </div>
+  
+      </div>
+    </section>
+
+    <!-- Section: Solution & Architectural Decisions -->
+    <section class="p-8 rounded-3xl bg-gradient-to-tr from-brand-950/30 to-[#0e121c] border border-brand-500/30 space-y-4">
+      <div class="flex items-center gap-2 text-brand-300 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+        <span>Architectural Solution</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl text-white">Engineered for Usability & Precision</h2>
+      <p class="text-base text-slate-300 leading-relaxed">Engineered a bottom-sheet driven interaction prototype using Figma Smart Animate with realistic spring physics, tactile confirmation feedback, and one-thumb touch targets. Every primary action is placed within the natural thumb comfort zone, gestures have clear affordances and reversibility, and transitions use spring physics that match iOS native motion.</p>
+    </section>
+
+    <!-- Section: Deliverables -->
+    <section class="space-y-4">
+      <div class="flex items-center gap-2 text-emerald-400 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="package" class="w-4 h-4"></i>
+        <span>Scope & Deliverables</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl text-white">Artifacts Handed Over</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        
+    <div class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span>Bottom Sheet Gesture Architecture (3 snap points: peek, half, full)</span>
+    </div>
+  
+    <div class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span>Tactile Micro-Interaction States (press, hover, active, success)</span>
+    </div>
+  
+    <div class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span>Spring Physics Animation Library (damping/stiffness presets)</span>
+    </div>
+  
+    <div class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span>Single-Thumb Ergonomic Heatmap (3 device sizes)</span>
+    </div>
+  
+    <div class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span>Gesture Vocabulary Documentation (8 patterns with trigger zones)</span>
+    </div>
+  
+    <div class="flex items-center gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+      <span>40+ Interactive States in Figma Prototype</span>
+    </div>
+  
+      </div>
+    </section>
+
+    <!-- Section: Measured Outcome & Impact -->
+    <section class="p-8 rounded-3xl bg-emerald-950/15 border border-emerald-500/20 space-y-4">
+      <div class="flex items-center gap-2 text-emerald-400 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="trending-up" class="w-4 h-4"></i>
+        <span>Measured Outcome & Business Value</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl text-white">Quantitative & Qualitative Results</h2>
+      <p class="text-base text-slate-300 leading-relaxed">Recorded zero tap misses during usability testing with 10 participants and 100% flow completion speed in single-hand mobile usage. Participants consistently described the prototype as 'feeling like a native app' despite being a Figma prototype. The spring physics animation library has been reused across 3 subsequent mobile projects.</p>
+    </section>
+
+    <!-- Section: Retrospective -->
+    
+    <section class="p-8 rounded-3xl bg-purple-950/10 border border-purple-500/20 space-y-4">
+      <div class="flex items-center gap-2 text-amber-300 text-xs font-mono uppercase tracking-wider font-bold">
+        <i data-lucide="lightbulb" class="w-4 h-4"></i>
+        <span>Retrospective & Honest Takeaways</span>
+      </div>
+      <h2 class="font-display font-extrabold text-2xl text-white">What I Learned & What I'd Do Next</h2>
+      <p class="text-base text-slate-300 leading-relaxed italic">This project reinforced that mobile design is fundamentally an ergonomic discipline, not just a visual one. The most polished UI is useless if users can't comfortably reach its buttons. The spring physics research was particularly eye-opening — the difference between linear and spring-based animation is the difference between a UI feeling 'digital' and feeling 'physical.' I now apply spring easing as a default across all mobile projects, and the bottom-anchored navigation pattern has become a core principle in my mobile design philosophy.</p>
+    </section>
+    
+
+    <!-- Next / Previous Case Study Navigation -->
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <a href="showcase-2023.html" class="w-full sm:w-auto p-4 rounded-2xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 transition-all flex items-center gap-3 group">
+        <i data-lucide="arrow-left" class="w-5 h-5 text-slate-400 group-hover:-translate-x-1 transition-transform"></i>
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Previous Study</div>
+          <div class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">UI/UX 2023 Showcase & Research Framework</div>
+        </div>
+      </a>
+      
+
+      <a href="../index.html#case-studies" class="px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-slate-300 transition-all">
+        View All Case Studies
+      </a>
+
+      
+      <a href="icare.html" class="w-full sm:w-auto p-4 rounded-2xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/10 transition-all flex items-center justify-end gap-3 text-right group">
+        <div>
+          <div class="text-[10px] font-mono text-slate-500 uppercase">Next Study</div>
+          <div class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">iCare: Preventative Health & Telemetry App</div>
+        </div>
+        <i data-lucide="arrow-right" class="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+      </a>
+      
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="rounded-3xl bg-gradient-to-tr from-brand-950/80 via-[#0d1017] to-purple-950/40 border border-white/15 p-8 sm:p-12 text-center space-y-6">
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Have a product challenge in mind?</h2>
+      <p class="text-slate-300 max-w-xl mx-auto text-sm leading-relaxed">
+        Let's discuss how user research, design token architecture, and high-fidelity prototyping can transform your product metrics.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:dharaviyashubham2000@gmail.com" class="px-8 py-3.5 rounded-full bg-white text-slate-950 font-bold text-sm hover:bg-slate-200 transition-all shadow-xl">
+          Email Shubham Directly
+        </a>
+        <a href="../index.html#contact" class="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all border border-white/10">
+          Leave a Project Brief
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#06070a] py-12 relative z-10 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Shubham Dharaviya (Sobom). "It doesn't matter what you & I think. It only matters what our user thinks."
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="https://www.figma.com/@sobom" target="_blank" class="hover:text-white transition-colors">Figma</a>
+        <a href="https://dribbble.com/sobom" target="_blank" class="hover:text-white transition-colors">Dribbble</a>
+        <a href="https://www.behance.net/ssdharviya" target="_blank" class="hover:text-white transition-colors">Behance</a>
+        <a href="https://shubhamdharviya.wordpress.com/author/shubhamdharviya/" target="_blank" class="hover:text-white transition-colors">WordPress</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+    const ambientCursor = document.getElementById('ambientCursor');
+    if (ambientCursor && window.innerWidth > 768) {
+      window.addEventListener('mousemove', (e) => {
+        ambientCursor.style.left = e.clientX + 'px';
+        ambientCursor.style.top = e.clientY + 'px';
+      });
+    }
+  </script>
+</body>
+</html>
