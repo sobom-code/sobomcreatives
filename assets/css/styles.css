@@ -1,4 +1,4 @@
-/* Sobom Creatives — Studio Stylesheet */
+/* Shubham Dharaviya (Sobom) — Personal Portfolio Stylesheet */
 
 /* Noise Background Overlay */
 .noise-overlay {
@@ -109,35 +109,6 @@
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
 }
 
-/* Estimator Interactive Cards */
-.estimator-option {
-  background-color: rgba(255, 255, 255, 0.02);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-.estimator-option:hover {
-  border-color: rgba(20, 91, 255, 0.5);
-  background-color: rgba(20, 91, 255, 0.04);
-}
-.estimator-option.active-est {
-  border-color: #3c86ff;
-  background-color: rgba(20, 91, 255, 0.12);
-  box-shadow: 0 0 20px rgba(60, 134, 255, 0.2);
-}
-
-.estimator-scale {
-  background-color: rgba(255, 255, 255, 0.02);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-.estimator-scale:hover {
-  border-color: rgba(139, 92, 246, 0.5);
-  background-color: rgba(139, 92, 246, 0.04);
-}
-.estimator-scale.active-scale {
-  border-color: #8b5cf6;
-  background-color: rgba(139, 92, 246, 0.12);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
-}
-
 /* Project Card Hover Scale */
 .project-card {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
@@ -146,14 +117,6 @@
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 0.25);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(60, 134, 255, 0.25);
-}
-
-/* Process Step Hover */
-.process-card {
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-.process-card:hover {
-  transform: translateY(-4px);
 }
 
 /* Modals */

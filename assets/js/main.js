@@ -1,98 +1,143 @@
 /**
- * Sobom Creatives — Interactive Engine & Client Portal
+ * Shubham Dharaviya (Sobom) — Personal Portfolio & Interactive Hub
  */
 
-// --- 1. Project Showcase Dataset ---
+// --- 1. Authentic Case Studies & Projects Dataset ---
 const projects = [
   {
     id: 0,
-    title: "Apex AI Enterprise Engine",
-    category: "saas",
-    categoryLabel: "SaaS & AI Platform",
-    tagline: "Autonomous Agent Orchestration Suite & Design Tokens",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
-    metrics: "+185% Daily Usage",
-    funding: "$34M Series B",
-    deliverables: ["Product Architecture", "Design System (Figma)", "Interactive Prototypes", "React Component Specs"],
-    description: "Apex AI required a high-density, low-latency workspace interface allowing engineers and product managers to train, orchestrate, and audit LLM agents in real-time. We engineered a modular panel architecture that reduced cognitive load and cut user task completion time by 44%.",
-    challenge: "The existing client interface struggled with information clutter, complex multi-agent execution graphs, and inconsistent UI patterns across their core product lines.",
-    solution: "We designed a multi-pane split layout featuring contextual drill-downs, tokenized color semantic states for agent tasks, and an interactive node canvas that turns complex pipelines into visual diagrams.",
-    impact: "Adopted by Fortune 500 data teams, with a 185% increase in user session engagement and zero UX regressions reported after 6 months."
+    title: "SSOT: Single Source of Truth",
+    category: "system",
+    categoryLabel: "Design System & Tokens",
+    tagline: "Unified Multi-Brand Design System, Atomic Components & Figma Variables",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
+    metrics: "100% Tokenized",
+    badge: "Figma Prototype Available",
+    prototypeUrl: "https://www.figma.com/proto/XHa7ODVhJDye4b4XUWby8q/SSOT?page-id=244%3A958&node-id=244-959&viewport=719%2C497%2C1.08&t=01vIUGtVsv91y9I3-1&scaling=scale-down-width&starting-point-node-id=244%3A959",
+    deliverables: ["Atomic Design Tokens", "Auto Layout 5.0 Components", "Dark/Light Modes", "Figma Variables", "Accessibility Matrix (WCAG AAA)"],
+    challenge: "Fast-growing digital products suffer from fractured UI libraries, uncoordinated hex values, and inconsistent spacing, creating friction between design and frontend engineering.",
+    solution: "Architected a scalable Single Source of Truth (SSOT) design system using Figma variables, semantic token aliasing, flexible responsive component variants, and interactive documentation.",
+    impact: "Cut feature design iteration time by over 60% and created seamless developer handoff with 1:1 token mapping."
   },
   {
     id: 1,
-    title: "Kroma Pay — Neobanking Experience",
-    category: "fintech",
-    categoryLabel: "Fintech & Mobile",
-    tagline: "Zero-Fee Global Multi-Currency Card & Wealth Ecosystem",
+    title: "Kyobee — Plan Selector & Checkout Flow",
+    category: "saas",
+    categoryLabel: "Hospitality SaaS & CRO",
+    tagline: "Guest Waitlist Management & Frictionless Subscription Checkout",
     image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1000&q=80",
-    metrics: "500k+ App Installs",
-    funding: "Top 3 App Store",
-    deliverables: ["iOS & Android Mobile UX", "Haptic Micro-Interactions", "Dynamic Card Shaders", "Onboarding Flow"],
-    description: "Kroma approached Sobom Creatives to craft a tactile, luxurious mobile banking experience that made cross-border transfers and fractional investments feel as effortless as sending an emoji.",
-    challenge: "Traditional banking apps feel cold, intimidating, and burdened by compliance forms that cause high drop-off during onboarding.",
-    solution: "We engineered a 3-minute frictionless KYC flow with animated micro-rewards, custom metallic physical card 3D preview customizers, and an intuitive swipe-to-split payment mechanic.",
-    impact: "Achieved a 94% KYC completion rate (industry benchmark is ~68%) and surpassed half a million active cardholders within the first 60 days of launch."
+    metrics: "+48% Conversion",
+    badge: "WordPress Case Study",
+    prototypeUrl: "https://shubhamdharviya.wordpress.com/author/shubhamdharviya/",
+    deliverables: ["Plan Selector UX", "Payment Flow Redesign", "Hero Section Optimization", "Confirmation Screen Mechanics"],
+    challenge: "Hospitality managers (restaurants, bars, and boutique hotels) experienced high drop-off during subscription tier selection and checkout due to visual clutter and ambiguous plan comparisons.",
+    solution: "Redesigned Kyobee's plan selection architecture with clear feature breakdowns, dynamic billing toggles, transparent pricing tiers, and a simplified 2-step checkout flow.",
+    impact: "Significantly decreased onboarding drop-off and boosted trial-to-paid conversion across active restaurant operators."
   },
   {
     id: 2,
-    title: "Aetheria — Spatial 3D Experience",
-    category: "web",
-    categoryLabel: "Web Experience & WebGL",
-    tagline: "Architectural Showcase & Interactive Real Estate Portal",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
-    metrics: "FWA of the Day",
-    funding: "+310% Session Time",
-    deliverables: ["Creative Art Direction", "WebGL Shaders", "Responsive Micro-Site", "Headless CMS Integration"],
-    description: "An immersive, cinematic spatial web journey presenting visionary architectural residences across Europe and Asia with interactive sunlight simulators and spatial sound design.",
-    challenge: "Delivering desktop-grade 3D graphics and photorealistic architectural walkthroughs without sacrificing mobile battery life or exceeding 2-second load times.",
-    solution: "Developed an optimized Three.js / WebGL pipeline with progressive geometry streaming, custom normal-mapped lighting shaders, and buttery smooth Lenis scroll synchronizations.",
-    impact: "Won Site of the Day (Awwwards & FWA nominee), generated $18M in pre-sale residential inquiries, and averaged over 4 minutes of dwell time per visitor."
+    title: "UI/UX 2023 Showcase & Framework",
+    category: "saas",
+    categoryLabel: "Full Portfolio Prototype",
+    tagline: "Interactive End-to-End Design Walkthrough & Case Study Archive",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80",
+    metrics: "Interactive Figma",
+    badge: "Figma Prototype Available",
+    prototypeUrl: "https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=206%3A4&node-id=1042-264&viewport=385%2C349%2C0.02&t=rVSi37eiT0utpoVB-1&scaling=contain&content-scaling=responsive",
+    deliverables: ["User Research Deck", "Persona Frameworks", "High-Fidelity Wireframes", "Interactive Prototype Walkthrough"],
+    challenge: "Presenting comprehensive problem statements, user research insights, and final UI prototypes in a single seamless, responsive format.",
+    solution: "Crafted a multi-viewport presentation prototype illustrating user journey mapping, design iterations, and interactive screen variants directly in Figma.",
+    impact: "Showcases verified design execution across web and mobile platforms with live responsive scaling."
   },
   {
     id: 3,
-    title: "Nexus Cloud — Developer Observability",
-    category: "saas",
-    categoryLabel: "SaaS & Developer Tools",
-    tagline: "Distributed Tracing, Anomaly Detection & Telemetry UI",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
-    metrics: "-40% Onboarding Friction",
-    funding: "Y Combinator S24",
-    deliverables: ["Telemetry Dashboard UI", "Dark Mode Design System", "Data Visualization Suite", "CLI UI Standards"],
-    description: "Transforming high-frequency server logs and distributed microservice traces into crystal-clear visual anomalies that engineering incident commanders can diagnose in seconds.",
-    challenge: "Engineers were overwhelmed by noisy log dumps and fragmented monitoring views during critical server outages.",
-    solution: "Designed high-contrast heatmap timelines, collapsible trace flamegraphs, and intelligent incident triage cards that surface root causes automatically.",
-    impact: "Cut mean time to detection (MTTD) by 32% for client engineering teams and drove their Y Combinator Demo Day customer conversions."
+    title: "MSfitCentre (Gym 2.0) — Fitness Tracking",
+    category: "mobile",
+    categoryLabel: "Mobile & HealthTech",
+    tagline: "Automated Workout Sync Mobile App & High-Converting Landing Page",
+    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1000&q=80",
+    metrics: "Native Mobile UI",
+    badge: "Case Study Available",
+    prototypeUrl: "https://shubhamdharviya.wordpress.com/author/shubhamdharviya/",
+    deliverables: ["Mobile Workout Tracker", "Gym Landing Page", "Routine Progress Visuals", "Haptic Interaction Design"],
+    challenge: "Gym-goers struggled with manual workout logging apps that were difficult to use between intense training sets.",
+    solution: "Engineered MSfitCentre Gym 2.0 with rapid 1-tap set completion, automatic rest timers, visual muscle group heatmaps, and a companion landing page.",
+    impact: "Praised by fitness enthusiasts for zero distraction ergonomics and intuitive progress charts."
   },
   {
     id: 4,
-    title: "Velour Atelier — Luxury E-Commerce",
-    category: "web",
-    categoryLabel: "Luxury E-Commerce",
-    tagline: "Editorial Lookbook, Bespoke Tailoring & Virtual Fitting",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80",
-    metrics: "$4.2M Launch GMV",
-    funding: "High-Margin D2C",
-    deliverables: ["Editorial Layouts", "Virtual Fitting Room UI", "Shopify Plus Custom Theme", "Checkout Optimization"],
-    description: "A digital haute couture storefront combining Parisian editorial typography with instantaneous 60fps shopping cart interactions and virtual sizing guides.",
-    challenge: "Luxury fashion shoppers abandon high-ticket carts when digital storefronts feel generic, sluggish, or lack visceral product detailing.",
-    solution: "Created an editorial layout with video-in-canvas micro-previews, high-resolution zoom loupes, and a 1-click Apple Pay checkout flow.",
-    impact: "Cart abandonment dropped by 28%, resulting in over $4.2M in gross merchandise value within the first fiscal quarter."
+    title: "iCare — Preventative Health App",
+    category: "mobile",
+    categoryLabel: "Healthcare & Mobile",
+    tagline: "Human-Centered Mobile Health Monitoring & Onboarding Journey",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
+    metrics: "Clean Health UI",
+    badge: "Figma & Dribbble Kit",
+    prototypeUrl: "https://dribbble.com/sobom",
+    deliverables: ["Onboarding Splash Flow", "Patient Health Dashboard", "Vital Sign Visualizations", "Medical Icon System"],
+    challenge: "Translating complex health telemetry into non-intimidating, accessible mobile screens for everyday users.",
+    solution: "Designed calming color gradients, high-contrast typography, clear biometric alert states, and a reassuring 3-step onboarding flow.",
+    impact: "Featured on Dribbble community showcase and adapted as an open design resource."
   },
   {
     id: 5,
-    title: "Pulse Health — Predictive Longevity App",
+    title: "Mobile App Flow Prototype (2602-39)",
     category: "mobile",
-    categoryLabel: "Mobile & HealthTech",
-    tagline: "Continuous Biometric Monitoring & AI Health Guidance",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80",
-    metrics: "Apple Design Nominee",
-    funding: "4.9★ App Store Rating",
-    deliverables: ["iOS Native Design", "Apple Watch Complications", "Biometric Visualizations", "Medical Token Set"],
-    description: "A companion application syncing with continuous glucose monitors, Oura rings, and Apple Watch metrics to deliver real-time metabolic insights and personalized recovery plans.",
-    challenge: "Translating dense clinical health biometrics into empowering, non-alarming insights for non-medical users.",
-    solution: "Developed humanized circadian color shifts that match the user's biological clock, alongside visual biometric rings and actionable micro-habits.",
-    impact: "Ranked #1 in the Medical & Longevity category in 14 countries and nominated for the Apple Design Award in Interaction Craft."
+    categoryLabel: "Interactive Prototype",
+    tagline: "Tactile Gesture-Driven Mobile Experience & Micro-States",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    metrics: "60fps Figma",
+    badge: "Figma Prototype Available",
+    prototypeUrl: "https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=2601%3A16114&node-id=2602-39&viewport=1044%2C446%2C0.08&t=wTkVOeGBxzJSc3Xe-1&scaling=contain&content-scaling=fixed",
+    deliverables: ["Micro-interactions", "Bottom Sheet Navigation", "Tactile Buttons", "Interactive Smart Animate"],
+    challenge: "Validating thumb ergonomics and navigation speed in high-density mobile interfaces.",
+    solution: "Created fixed-content Figma prototypes with realistic spring physics, micro-interactions, and instant feedback cues.",
+    impact: "Demonstrates production-level prototyping and attention to ergonomic details."
+  },
+  {
+    id: 6,
+    title: "Swiggy Cart & Ordering Re-Architecture",
+    category: "redesign",
+    categoryLabel: "FoodTech & CRO",
+    tagline: "Cognitive Friction Reduction & Cart Recovery Flow",
+    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1000&q=80",
+    metrics: "CRO Case Study",
+    badge: "UX Redesign",
+    prototypeUrl: "https://shubhamdharviya.wordpress.com/author/shubhamdharviya/",
+    deliverables: ["Cart Screen Audit", "Heuristic Evaluation", "Simplified Summary Card", "Delivery Timeline UX"],
+    challenge: "Food ordering carts frequently encounter checkout abandonment due to surprise charges, cluttered offer banners, and unclear delivery estimates.",
+    solution: "Conducted a UX heuristic audit and redesigned the order review tray, bringing itemized pricing, delivery ETA, and payment options into a single glanceable card.",
+    impact: "Created a distraction-free order path that eliminates cognitive hesitation at checkout."
+  },
+  {
+    id: 7,
+    title: "Agri-Commerce Fertilizer Application",
+    category: "mobile",
+    categoryLabel: "Accessible E-Commerce",
+    tagline: "Persona-Driven Mobile E-Commerce for Agricultural Supplies",
+    image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1000&q=80",
+    metrics: "User Tested",
+    badge: "Field Research",
+    prototypeUrl: "https://shubhamdharviya.wordpress.com/author/shubhamdharviya/",
+    deliverables: ["User Personas", "Simplified Catalog UI", "Voice Search Cues", "High Contrast Design"],
+    challenge: "Designing an accessible digital storefront for rural and agricultural users who prioritize speed, clarity, and low cognitive friction.",
+    solution: "Formulated detailed farmer personas, implemented high-contrast typography, large tactile buttons, clear product imagery, and simplified quantity pickers.",
+    impact: "Successfully validated with target users for seamless ordering in low-bandwidth environments."
+  },
+  {
+    id: 8,
+    title: "Rocketline & High-Conversion Landing Pages",
+    category: "redesign",
+    categoryLabel: "Landing Page CRO",
+    tagline: "A/B Tested Visual Hierarchy & Modern Conversion Design",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
+    metrics: "2.4x Uplift",
+    badge: "WordPress Case Study",
+    prototypeUrl: "https://shubhamdharviya.wordpress.com/author/shubhamdharviya/",
+    deliverables: ["Above-The-Fold Overhaul", "Value Proposition Hierarchy", "Social Proof Integration", "Responsive Mobile Layout"],
+    challenge: "A generic landing page layout with unclear value propositions led to high bounce rates and low CTA engagement.",
+    solution: "Redesigned the narrative flow, hero imagery, typography contrast, and interactive product demo cards.",
+    impact: "Doubled user engagement duration and delivered a 2.4x increase in sign-up conversions."
   }
 ];
 
@@ -113,23 +158,23 @@ function renderProjects(filter = 'all') {
     
     card.innerHTML = `
       <div>
-        <!-- Image Preview Thumbnail -->
+        <!-- Image Preview Container -->
         <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
           <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-85 group-hover:opacity-100">
           <div class="absolute inset-0 bg-gradient-to-t from-[#08090C] via-transparent to-transparent opacity-90"></div>
           
           <div class="absolute top-4 left-4 flex gap-2">
-            <span class="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-brand-300 border border-white/10 font-semibold">
+            <span class="text-[10px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-brand-300 border border-white/10 font-semibold">
               ${project.categoryLabel}
             </span>
           </div>
 
           <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
-            <span class="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold backdrop-blur-sm">
+            <span class="px-2.5 py-1 rounded-lg bg-brand-500/20 text-brand-300 border border-brand-500/30 font-semibold backdrop-blur-sm">
               ${project.metrics}
             </span>
-            <span class="text-slate-300 font-mono text-[11px] bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-              ${project.funding}
+            <span class="text-slate-300 font-mono text-[11px] bg-black/60 px-2.5 py-0.5 rounded backdrop-blur-sm">
+              ${project.badge}
             </span>
           </div>
         </div>
@@ -146,12 +191,12 @@ function renderProjects(filter = 'all') {
         </div>
       </div>
 
-      <!-- Footer Pills -->
+      <!-- Footer Action -->
       <div class="px-6 pb-6 pt-0 border-t border-white/5 mt-2 flex items-center justify-between text-[11px] text-slate-400">
         <span class="text-brand-400 font-semibold flex items-center gap-1 group-hover:underline">
-          Read Case Study <i data-lucide="arrow-right" class="w-3 h-3"></i>
+          View Case Breakdown <i data-lucide="arrow-right" class="w-3 h-3"></i>
         </span>
-        <span class="text-slate-500 font-mono">Figma · Tokens</span>
+        <span class="text-slate-500 font-mono">Shubham Dharaviya</span>
       </div>
     `;
     projectsGrid.appendChild(card);
@@ -162,7 +207,7 @@ function renderProjects(filter = 'all') {
   }
 }
 
-// Setup Filter Buttons
+// Filter button click listener
 if (filterContainer) {
   filterContainer.addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-btn');
@@ -176,7 +221,6 @@ if (filterContainer) {
     btn.classList.remove('text-slate-400');
     
     const filter = btn.getAttribute('data-filter');
-    playClickSound();
     renderProjects(filter);
   });
 }
@@ -196,7 +240,7 @@ window.openCaseStudy = function(id) {
         <span class="text-xs font-mono uppercase tracking-wider text-brand-400 px-2.5 py-1 rounded bg-brand-500/10 border border-brand-500/20 font-semibold">
           ${project.categoryLabel}
         </span>
-        <span class="text-xs text-slate-500 font-mono">/ CASE ARCHIVE</span>
+        <span class="text-xs text-slate-500 font-mono">/ CASE STUDY DEEP DIVE</span>
       </div>
       <h2 class="font-display font-black text-2xl sm:text-4xl text-white tracking-tight">
         ${project.title}
@@ -204,52 +248,63 @@ window.openCaseStudy = function(id) {
       <p class="text-base text-slate-300 font-medium">${project.tagline}</p>
     </div>
 
-    <!-- Hero Image inside Modal -->
+    <!-- Image Preview -->
     <div class="rounded-2xl overflow-hidden aspect-[16/9] border border-white/10 relative">
       <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
-      <div class="absolute bottom-4 left-4 flex gap-3">
-        <span class="px-3 py-1.5 rounded-xl bg-black/70 backdrop-blur-md text-emerald-400 border border-emerald-500/30 text-xs font-bold">
-          Impact: ${project.metrics}
+      <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+        <span class="px-3 py-1.5 rounded-xl bg-black/80 backdrop-blur-md text-brand-300 border border-brand-500/30 text-xs font-bold">
+          ${project.metrics}
         </span>
-        <span class="px-3 py-1.5 rounded-xl bg-black/70 backdrop-blur-md text-white border border-white/20 text-xs font-bold">
-          Milestone: ${project.funding}
-        </span>
+        ${project.prototypeUrl ? `
+          <a href="${project.prototypeUrl}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all flex items-center gap-1.5 shadow-lg">
+            <span>Open Prototype / Resource</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        ` : ''}
       </div>
     </div>
 
-    <!-- Breakdown Grid -->
+    <!-- Problem vs Solution Breakdown -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
       <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
         <h4 class="font-display font-bold text-white text-base flex items-center gap-2">
-          <i data-lucide="alert-circle" class="w-4 h-4 text-amber-400"></i> The Challenge
+          <i data-lucide="alert-circle" class="w-4 h-4 text-amber-400"></i> The Problem
         </h4>
         <p class="text-xs text-slate-300 leading-relaxed">${project.challenge}</p>
       </div>
 
       <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
         <h4 class="font-display font-bold text-white text-base flex items-center gap-2">
-          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> The Sobom Solution
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> The Design Solution
         </h4>
         <p class="text-xs text-slate-300 leading-relaxed">${project.solution}</p>
       </div>
     </div>
 
-    <!-- Project Scope & Deliverables -->
-    <div class="p-6 rounded-2xl bg-brand-950/20 border border-brand-500/20 space-y-3">
-      <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Production Deliverables</h4>
-      <div class="flex flex-wrap gap-2">
-        ${project.deliverables.map(d => `<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-200">${d}</span>`).join('')}
+    <!-- Deliverables & Impact -->
+    <div class="p-6 rounded-2xl bg-brand-950/20 border border-brand-500/20 space-y-4">
+      <div>
+        <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-2">Key Deliverables</h4>
+        <div class="flex flex-wrap gap-2">
+          ${project.deliverables.map(d => `<span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-200">${d}</span>`).join('')}
+        </div>
+      </div>
+      <div>
+        <h4 class="font-display font-bold text-emerald-400 text-sm uppercase tracking-wider mb-1">Measured Outcome</h4>
+        <p class="text-xs text-slate-300 leading-relaxed">${project.impact}</p>
       </div>
     </div>
 
-    <!-- Modal CTA -->
+    <!-- Modal Actions -->
     <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10">
       <div class="text-xs text-slate-400">
-        Interested in achieving similar growth metrics for your product?
+        Designed by Shubham Dharaviya (Sobom)
       </div>
-      <a href="#contact" onclick="closeCaseStudy()" class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all text-center">
-        Request Scope Consultation
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="#contact" onclick="closeCaseStudy()" class="px-5 py-2 rounded-full bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all">
+          Discuss This Project
+        </a>
+      </div>
     </div>
   `;
 
@@ -266,7 +321,6 @@ window.closeCaseStudy = function() {
   document.body.style.overflow = '';
 };
 
-// Close modal when clicking on backdrop
 if (caseStudyModal) {
   caseStudyModal.addEventListener('click', (e) => {
     if (e.target === caseStudyModal) {
@@ -275,113 +329,27 @@ if (caseStudyModal) {
   });
 }
 
-// --- 4. Interactive Project Cost & Timeline Estimator ---
-let selectedCost = 4500;
-let selectedWeeks = 3;
-let selectedMultiplier = 1;
-let selectedAddonTotal = 0;
-
-const costDisplay = document.getElementById('estimateCostDisplay');
-const weeksDisplay = document.getElementById('estimateWeeksDisplay');
-
-function recalculateEstimate() {
-  const total = Math.round((selectedCost * selectedMultiplier) + selectedAddonTotal);
-  const totalWeeks = Math.max(2, Math.round(selectedWeeks * (selectedMultiplier > 1.5 ? 1.5 : 1)));
-  
-  if (costDisplay) {
-    costDisplay.textContent = `$${total.toLocaleString()}`;
-  }
-  if (weeksDisplay) {
-    weeksDisplay.textContent = `~ ${totalWeeks} Weeks Turnaround`;
-  }
-}
-
-// Project Type selection
-const projectTypeButtons = document.querySelectorAll('.estimator-option');
-projectTypeButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    projectTypeButtons.forEach(b => b.classList.remove('active-est'));
-    btn.classList.add('active-est');
-    selectedCost = parseInt(btn.getAttribute('data-cost'), 10) || 4500;
-    selectedWeeks = parseInt(btn.getAttribute('data-weeks'), 10) || 3;
-    playClickSound();
-    recalculateEstimate();
-  });
-});
-
-// Scale selection
-const scaleButtons = document.querySelectorAll('.estimator-scale');
-scaleButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    scaleButtons.forEach(b => b.classList.remove('active-scale'));
-    btn.classList.add('active-scale');
-    selectedMultiplier = parseFloat(btn.getAttribute('data-multiplier')) || 1;
-    playClickSound();
-    recalculateEstimate();
-  });
-});
-
-// Addons Checkboxes
-const addonCheckboxes = document.querySelectorAll('.addon-checkbox');
-addonCheckboxes.forEach(cb => {
-  cb.addEventListener('change', () => {
-    let sum = 0;
-    addonCheckboxes.forEach(box => {
-      if (box.checked) {
-        sum += parseInt(box.getAttribute('data-addon-cost'), 10) || 0;
-      }
-    });
-    selectedAddonTotal = sum;
-    playClickSound();
-    recalculateEstimate();
-  });
-});
-
-// "Lock In This Scope" button click: auto-fill contact form brief and scroll down
-const bookEstimatedScopeBtn = document.getElementById('bookEstimatedScopeBtn');
-if (bookEstimatedScopeBtn) {
-  bookEstimatedScopeBtn.addEventListener('click', () => {
-    const activeType = document.querySelector('.estimator-option.active-est .font-bold')?.textContent || 'Custom Product';
-    const activeScale = document.querySelector('.estimator-scale.active-scale .font-bold')?.textContent || 'MVP Scale';
-    const totalCost = costDisplay ? costDisplay.textContent : '$4,500';
-    const totalWeeks = weeksDisplay ? weeksDisplay.textContent : '3 Weeks';
-    
-    const briefArea = document.getElementById('formBrief');
-    if (briefArea) {
-      briefArea.value = `Hi Sobom Creatives! I calculated an estimate through your website for a [${activeType}] at [${activeScale}] scale (Estimate: ${totalCost}, Timeline: ${totalWeeks}). We are looking to discuss our requirements and kick off soon.`;
-    }
-    
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    playClickSound();
-  });
-}
-
-// --- 5. Interactive Contact Inquiry Form ---
-const inquiryForm = document.getElementById('projectInquiryForm');
+// --- 4. Interactive Contact Form ---
+const contactForm = document.getElementById('contactForm');
 const confirmationModal = document.getElementById('confirmationModal');
 const confirmationText = document.getElementById('confirmationText');
 
-if (inquiryForm) {
-  inquiryForm.addEventListener('submit', (e) => {
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const name = document.getElementById('formName')?.value || 'Friend';
-    const email = document.getElementById('formEmail')?.value || '';
-    const company = document.getElementById('formCompany')?.value || 'Your company';
+    const name = document.getElementById('contactName')?.value || 'Friend';
+    const email = document.getElementById('contactEmail')?.value || '';
     
     if (confirmationText) {
-      confirmationText.textContent = `Thank you, ${name}! We've received your project brief for ${company}. Our creative director will review your details and send a tailored proposal to ${email} within 24 hours.`;
+      confirmationText.textContent = `Thank you, ${name}! Your message has been routed to Shubham Dharaviya. A reply will be sent to ${email} within 24 hours.`;
     }
     
     if (confirmationModal) {
       confirmationModal.classList.add('modal-open');
     }
     
-    inquiryForm.reset();
-    playSuccessSound();
+    contactForm.reset();
   });
 }
 
@@ -399,38 +367,18 @@ if (confirmationModal) {
   });
 }
 
-// --- 6. FAQ Accordion ---
-const faqButtons = document.querySelectorAll('.faq-btn');
-faqButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    const chevron = btn.querySelector('[data-lucide="chevron-down"]');
-    const isHidden = content.classList.contains('hidden');
-    
-    // Close all other FAQs
-    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-    document.querySelectorAll('.faq-btn [data-lucide="chevron-down"]').forEach(ch => ch.classList.remove('rotate-180'));
-    
-    if (isHidden) {
-      content.classList.remove('hidden');
-      if (chevron) chevron.classList.add('rotate-180');
-      playClickSound();
-    }
-  });
-});
-
-// --- 7. Live Studio Clock (UTC) ---
+// --- 5. Real-Time Local Studio Clock ---
 function updateStudioClock() {
-  const clockElement = document.getElementById('studioClock');
+  const clockElement = document.getElementById('localClock');
   if (!clockElement) return;
   const now = new Date();
-  const timeString = now.toLocaleTimeString('en-US', { hour12: false, timeZone: 'UTC' }) + ' UTC';
+  const timeString = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
   clockElement.textContent = timeString;
 }
 setInterval(updateStudioClock, 1000);
 updateStudioClock();
 
-// --- 8. Ambient Cursor Light Tracking ---
+// --- 6. Ambient Cursor Light Tracker ---
 const ambientCursor = document.getElementById('ambientCursor');
 if (ambientCursor && window.innerWidth > 768) {
   window.addEventListener('mousemove', (e) => {
@@ -439,7 +387,7 @@ if (ambientCursor && window.innerWidth > 768) {
   });
 }
 
-// --- 9. 3D Card Tilt Effect in Hero ---
+// --- 7. 3D Tilt Card in Hero Section ---
 const heroCard = document.getElementById('heroCard');
 if (heroCard && window.innerWidth > 768) {
   heroCard.addEventListener('mousemove', (e) => {
@@ -450,8 +398,8 @@ if (heroCard && window.innerWidth > 768) {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
     
-    const rotateX = ((y - centerY) / centerY) * -7;
-    const rotateY = ((x - centerX) / centerX) * 7;
+    const rotateX = ((y - centerY) / centerY) * -6;
+    const rotateY = ((x - centerX) / centerX) * 6;
     
     heroCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
@@ -461,68 +409,13 @@ if (heroCard && window.innerWidth > 768) {
   });
 }
 
-// --- 10. Synthesized Web Audio Sound Effects (Optional Audio Toggle) ---
-let soundEnabled = false;
-let audioCtx = null;
-
-const soundToggleBtn = document.getElementById('soundToggleBtn');
-if (soundToggleBtn) {
-  soundToggleBtn.addEventListener('click', () => {
-    soundEnabled = !soundEnabled;
-    if (soundEnabled && !audioCtx) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    }
-    soundToggleBtn.classList.toggle('text-brand-400', soundEnabled);
-    soundToggleBtn.classList.toggle('border-brand-500/40', soundEnabled);
-    
-    if (soundEnabled) {
-      playSuccessSound();
-    }
-  });
-}
-
-function playClickSound() {
-  if (!soundEnabled || !audioCtx) return;
-  try {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(800, audioCtx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(400, audioCtx.currentTime + 0.05);
-    gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.start();
-    osc.stop(audioCtx.currentTime + 0.05);
-  } catch (err) {}
-}
-
-function playSuccessSound() {
-  if (!soundEnabled || !audioCtx) return;
-  try {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(520, audioCtx.currentTime);
-    osc.frequency.setValueAtTime(660, audioCtx.currentTime + 0.08);
-    gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.start();
-    osc.stop(audioCtx.currentTime + 0.2);
-  } catch (err) {}
-}
-
-// --- 11. Mobile Drawer Menu ---
+// --- 8. Mobile Drawer Menu ---
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 if (mobileMenuBtn && mobileMenu) {
   mobileMenuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
-    playClickSound();
   });
   
   mobileMenu.querySelectorAll('a').forEach(link => {
@@ -532,7 +425,7 @@ if (mobileMenuBtn && mobileMenu) {
   });
 }
 
-// Initial Boot
+// Boot Initialization
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects('all');
   if (window.lucide) {

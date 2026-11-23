@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobom Creatives — High-Impact UI/UX & Digital Product Design Studio</title>
-  <meta name="description" content="Sobom Creatives is a premier boutique design studio crafting world-class digital products, mobile ecosystems, high-converting web apps, and iconic design systems.">
+  <title>Shubham Dharaviya (Sobom) — Product & UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Shubham Dharaviya (Sobom) — Product & UI/UX Designer specializing in scalable design systems (SSOT), frictionless mobile apps, and high-conversion web platforms.">
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   
-  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <!-- Google Fonts: Syne, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -35,9 +35,6 @@
               400: '#3c86ff',
               500: '#145bff',
               600: '#003feb',
-              700: '#0033c7',
-              800: '#022ba1',
-              900: '#08277f',
               accent: '#00F0FF',
               purple: '#8B5CF6',
               emerald: '#10B981',
@@ -49,17 +46,12 @@
           animation: {
             'spin-slow': 'spin 20s linear infinite',
             'float': 'float 6s ease-in-out infinite',
-            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
             'marquee': 'marquee 25s linear infinite',
           },
           keyframes: {
             float: {
               '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-12px)' },
-            },
-            pulseSubtle: {
-              '0%, 100%': { opacity: '0.4' },
-              '50%': { opacity: '0.8' },
+              '50%': { transform: 'translateY(-10px)' },
             },
             marquee: {
               '0%': { transform: 'translateX(0%)' },
@@ -74,12 +66,12 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom CSS -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body class="bg-[#07080B] text-slate-100 font-sans selection:bg-brand-500 selection:text-white antialiased overflow-x-hidden relative">
 
-  <!-- Ambient Background Mesh Glows -->
+  <!-- Ambient Glow Background Effects -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
     <div class="glow-orb glow-orb-1"></div>
     <div class="glow-orb glow-orb-2"></div>
@@ -87,35 +79,39 @@
     <div class="noise-overlay"></div>
   </div>
 
-  <!-- Interactive Custom Cursor Ambient Glow -->
+  <!-- Ambient Mouse Glow Follower -->
   <div id="ambientCursor" class="ambient-cursor pointer-events-none hidden md:block"></div>
 
   <!-- Top Announcement Bar -->
-  <div class="relative z-50 bg-gradient-to-r from-brand-900/60 via-purple-950/40 to-slate-950/80 border-b border-white/5 py-2 px-4 backdrop-blur-md">
+  <div class="relative z-50 bg-gradient-to-r from-brand-950/70 via-purple-950/40 to-slate-950/90 border-b border-white/5 py-2 px-4 backdrop-blur-md">
     <div class="max-w-7xl mx-auto flex items-center justify-between text-xs">
       <div class="flex items-center space-x-2">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <span class="text-slate-300 font-medium">Currently accepting selected clients for Q1/Q2 2027</span>
+        <span class="text-slate-200 font-medium">Open for Senior Product / UI/UX Design Opportunities & High-Impact Contracts</span>
       </div>
-      <div class="hidden md:flex items-center space-x-6 text-slate-400">
-        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-brand-400"></i> Studio Time: <span id="studioClock" class="text-slate-200 font-mono">16:11:00 UTC</span></span>
-        <span class="text-slate-600">|</span>
-        <a href="#estimator" class="hover:text-brand-300 transition-colors flex items-center gap-1">
-          <span>Instant Quote Estimator</span>
-          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+      <div class="hidden md:flex items-center space-x-5 text-slate-400">
+        <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="hover:text-brand-300 transition-colors flex items-center gap-1.5 font-medium text-slate-200">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-400"></i>
+          <span>Download Resume (PDF)</span>
+          <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i>
         </a>
+        <span class="text-slate-600">|</span>
+        <span class="flex items-center gap-1.5 text-slate-400">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-400"></i>
+          <span>Local Time: <span id="localClock" class="font-mono text-slate-200">18:00</span></span>
+        </span>
       </div>
     </div>
   </div>
 
   <!-- Main Navigation -->
-  <header class="sticky top-0 z-40 w-full transition-all duration-300 backdrop-blur-xl bg-[#07080B]/80 border-b border-white/5" id="navbar">
+  <header class="sticky top-0 z-40 w-full transition-all duration-300 backdrop-blur-xl bg-[#07080B]/85 border-b border-white/5" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Logo -->
+      <!-- Brand Logo / Creator Name -->
       <a href="#" class="group flex items-center gap-3">
         <div class="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-brand-accent p-[1px] shadow-lg shadow-brand-500/20 group-hover:shadow-brand-500/40 transition-all duration-300">
           <div class="w-full h-full bg-[#090b11] rounded-[11px] flex items-center justify-center">
@@ -123,33 +119,45 @@
           </div>
         </div>
         <div class="flex flex-col">
-          <span class="font-display font-extrabold text-lg tracking-tight text-white group-hover:text-brand-300 transition-colors">
-            SOBOM <span class="text-brand-400 font-medium text-xs tracking-widest uppercase ml-1 px-1.5 py-0.5 rounded bg-brand-500/10 border border-brand-500/20">Studio</span>
+          <span class="font-display font-bold text-lg tracking-tight text-white group-hover:text-brand-300 transition-colors">
+            Shubham Dharaviya
           </span>
-          <span class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">Digital Craft & UI/UX</span>
+          <span class="text-[11px] text-slate-400 font-mono tracking-wider flex items-center gap-1.5">
+            <span>Product & UI/UX</span>
+            <span class="text-brand-400">· @sobom</span>
+          </span>
         </div>
       </a>
 
-      <!-- Desktop Nav Items -->
+      <!-- Desktop Navigation Menu -->
       <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/[0.03] border border-white/5 px-4 py-1.5 rounded-full shadow-inner">
         <a href="#work" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Selected Works</a>
-        <a href="#services" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Capabilities</a>
-        <a href="#process" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Process</a>
-        <a href="#estimator" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all flex items-center gap-1.5">
-          <span>Estimator</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+        <a href="#prototypes" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all flex items-center gap-1.5">
+          <span>Live Prototypes</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
         </a>
-        <a href="#testimonials" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Reviews</a>
-        <a href="#faq" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">FAQ</a>
+        <a href="#philosophy" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Philosophy</a>
+        <a href="#community" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">Community</a>
+        <a href="#about" class="px-3.5 py-1.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all">About</a>
       </nav>
 
-      <!-- Action Buttons -->
-      <div class="hidden md:flex items-center space-x-4">
-        <button id="soundToggleBtn" class="p-2.5 rounded-full text-slate-400 hover:text-white hover:bg-white/5 transition-all text-xs flex items-center gap-1.5 border border-white/5" title="Toggle ambient audio cues">
-          <i data-lucide="volume-2" class="w-4 h-4"></i>
-        </button>
+      <!-- Action Buttons & Quick Links -->
+      <div class="hidden md:flex items-center space-x-3">
+        <!-- Figma Profile Link -->
+        <a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-xs flex items-center gap-1.5" title="Figma Community @sobom">
+          <i data-lucide="figma" class="w-4 h-4 text-purple-400"></i>
+        </a>
+        <!-- Dribbble Link -->
+        <a href="https://dribbble.com/sobom" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-xs flex items-center gap-1.5" title="Dribbble @sobom">
+          <i data-lucide="dribbble" class="w-4 h-4 text-pink-400"></i>
+        </a>
+        <!-- Behance Link -->
+        <a href="https://www.behance.net/ssdharviya" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-xs flex items-center gap-1.5" title="Behance @ssdharviya">
+          <i data-lucide="briefcase" class="w-4 h-4 text-blue-400"></i>
+        </a>
+        <!-- Contact CTA -->
         <a href="#contact" class="btn-primary group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm bg-gradient-to-r from-brand-500 to-indigo-600 text-white shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:scale-[1.02] active:scale-95 transition-all duration-300">
-          <span>Start a Project</span>
+          <span>Let's Talk</span>
           <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
         </a>
       </div>
@@ -164,14 +172,16 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="hidden md:hidden border-b border-white/10 bg-[#090b11]/95 backdrop-blur-2xl px-6 py-6 space-y-4">
       <a href="#work" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Selected Works</a>
-      <a href="#services" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Capabilities</a>
-      <a href="#process" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Process</a>
-      <a href="#estimator" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Price Estimator</a>
-      <a href="#testimonials" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Reviews & Social Proof</a>
-      <a href="#faq" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">FAQ</a>
-      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-        <a href="#contact" class="w-full text-center py-3 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 text-white font-semibold shadow-md">
-          Start a Project
+      <a href="#prototypes" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Live Figma Prototypes</a>
+      <a href="#philosophy" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Design Philosophy</a>
+      <a href="#community" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">Figma, Dribbble & Behance</a>
+      <a href="#about" class="block py-2 text-base font-medium text-slate-300 hover:text-brand-400">About Me</a>
+      <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="block py-2 text-base font-medium text-brand-300 hover:underline">
+        Download Resume (PDF) ↗
+      </a>
+      <div class="pt-4 border-t border-white/10">
+        <a href="#contact" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 text-white font-semibold shadow-md">
+          Get in Touch
         </a>
       </div>
     </div>
@@ -183,137 +193,141 @@
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Hero Text Content -->
+        <!-- Hero Text Column -->
         <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
           
-          <!-- Pill Badge -->
+          <!-- Designer Badge -->
           <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-300 text-xs font-semibold backdrop-blur-md">
             <span class="flex h-2 w-2 rounded-full bg-brand-400 animate-pulse"></span>
-            <span>SOBOM CREATIVES — BOUTIQUE DESIGN ENTITY</span>
+            <span>SHUBHAM DHARAVIYA · SOBOM CREATIVES</span>
             <span class="text-white/40">/</span>
-            <span class="text-slate-300 font-mono">EST. 2021</span>
+            <span class="text-slate-300 font-mono">PRODUCT DESIGNER</span>
           </div>
 
-          <!-- Main Catchphrase -->
+          <!-- Main Philosophy Catchphrase (User's authentic motto) -->
           <h1 class="font-display font-extrabold text-4xl sm:text-6xl xl:text-7xl tracking-tight leading-[1.08] text-white">
-            We craft digital experiences that <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-indigo-300 to-brand-accent underline-gradient">command attention.</span>
+            "It doesn't matter what you & I think. It only matters <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-indigo-300 to-brand-accent underline-gradient">what our user thinks."</span>
           </h1>
 
-          <!-- Subtitle -->
+          <!-- Bio / Introduction -->
           <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            Sobom Creatives partners with visionary tech founders, high-growth startups, and established enterprises to design iconic UI/UX systems, fluid mobile apps, and conversion-focused web platforms.
+            I craft intuitive digital products, scalable multi-brand design systems (SSOT), and high-conversion mobile & web experiences with obsessively tested ergonomics and pixel craft.
           </p>
 
-          <!-- CTA Group -->
+          <!-- Action Buttons Group -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
             <a href="#work" class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-base bg-white text-slate-950 hover:bg-slate-200 transition-all duration-300 flex items-center justify-center gap-3 shadow-xl shadow-white/10 group">
-              <span>Explore Selected Works</span>
+              <span>View Case Studies</span>
               <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
             </a>
-            <a href="#estimator" class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-base bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-white transition-all duration-300 flex items-center justify-center gap-2.5 backdrop-blur-sm">
-              <i data-lucide="calculator" class="w-4 h-4 text-brand-400"></i>
-              <span>Estimate Your Project</span>
+            <a href="#prototypes" class="w-full sm:w-auto px-8 py-4 rounded-full font-bold text-base bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-white transition-all duration-300 flex items-center justify-center gap-2.5 backdrop-blur-sm">
+              <i data-lucide="play" class="w-4 h-4 text-brand-400"></i>
+              <span>Play Interactive Prototypes</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-4 rounded-full font-semibold text-sm bg-brand-500/10 hover:bg-brand-500/20 border border-brand-500/30 text-brand-300 transition-all duration-300 flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Resume</span>
             </a>
           </div>
 
-          <!-- Trust Badges & Verified Stats -->
+          <!-- Verified Experience & Craft Metric Badges -->
           <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0">
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-black text-white" id="statProducts">45+</div>
-              <div class="text-xs text-slate-400 font-medium mt-0.5">Products Launched</div>
+              <div class="text-2xl sm:text-3xl font-display font-black text-white">4+ Years</div>
+              <div class="text-xs text-slate-400 font-medium mt-0.5">UI/UX & Product Design</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-black text-brand-300" id="statFunding">$120M+</div>
-              <div class="text-xs text-slate-400 font-medium mt-0.5">Client Capital Raised</div>
+              <div class="text-2xl sm:text-3xl font-display font-black text-brand-300">20+ Projects</div>
+              <div class="text-xs text-slate-400 font-medium mt-0.5">Web & Mobile Ecosystems</div>
             </div>
             <div>
-              <div class="text-2xl sm:text-3xl font-display font-black text-white" id="statSatisfaction">99.4%</div>
-              <div class="text-xs text-slate-400 font-medium mt-0.5">Client Satisfaction</div>
+              <div class="text-2xl sm:text-3xl font-display font-black text-white">SSOT</div>
+              <div class="text-xs text-slate-400 font-medium mt-0.5">Design System Architect</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Hero Visual Showcase / Interactive Glass Cards -->
+        <!-- Hero Visual Showcase / Interactive 3D Card Stack -->
         <div class="lg:col-span-5 relative">
           
-          <!-- Decorative Glow behind card stack -->
+          <!-- Decorative Glow Orbs -->
           <div class="absolute -top-10 -right-10 w-72 h-72 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
           <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
 
-          <!-- Main Interactive Hero Card (3D Tilt Effect) -->
+          <!-- 3D Tilt Card Container -->
           <div id="heroCard" class="tilt-card relative rounded-3xl bg-gradient-to-b from-white/10 via-white/[0.03] to-white/[0.01] p-1 border border-white/15 shadow-2xl backdrop-blur-2xl">
             <div class="rounded-[22px] bg-[#0c0e14] overflow-hidden p-6 relative">
               
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-5 border-b border-white/10">
+              <!-- Card Top Header -->
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
                 <div class="flex items-center gap-3">
                   <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                   <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                   <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-                  <span class="text-xs font-mono text-slate-400 ml-2">sobom-design-system.fig</span>
+                  <span class="text-xs font-mono text-slate-400 ml-2">SSOT-Single-Source-of-Truth.fig</span>
                 </div>
                 <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center gap-1">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Live Preview
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Figma Prototype
                 </span>
               </div>
 
-              <!-- Interactive Mockup Visual inside Hero Card -->
-              <div class="mt-6 space-y-4">
+              <!-- Interactive Mockup Image inside Hero Card -->
+              <div class="mt-5 space-y-4">
                 
-                <!-- Project Spotlight Preview Banner -->
                 <div class="relative rounded-2xl overflow-hidden group border border-white/10 bg-slate-900/60 aspect-[16/10]">
-                  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80" 
-                       alt="Sobom Creatives UI Kit" 
+                  <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1000&q=80" 
+                       alt="Shubham Dharaviya SSOT Design System Preview" 
                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
                   
                   <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <div>
-                      <span class="text-[10px] uppercase font-mono tracking-wider text-brand-300 bg-brand-950/80 border border-brand-500/30 px-2 py-0.5 rounded-full">FLAGSHIP SUITE</span>
-                      <h4 class="text-base font-bold text-white mt-1">Apex AI Engine — Design System v3.2</h4>
+                      <span class="text-[10px] uppercase font-mono tracking-wider text-brand-300 bg-brand-950/80 border border-brand-500/30 px-2 py-0.5 rounded-full">FLAGSHIP SYSTEM</span>
+                      <h4 class="text-base font-bold text-white mt-1">SSOT Unified Design System</h4>
                     </div>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white">+185% Engagement</span>
+                    <a href="https://www.figma.com/proto/XHa7ODVhJDye4b4XUWby8q/SSOT?page-id=244%3A958&node-id=244-959&viewport=719%2C497%2C1.08&t=01vIUGtVsv91y9I3-1&scaling=scale-down-width&starting-point-node-id=244%3A959" 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-white hover:bg-brand-500 transition-colors flex items-center gap-1">
+                      <span>Launch</span>
+                      <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
                   </div>
                 </div>
 
-                <!-- Live Component Switcher Mockup -->
-                <div class="grid grid-cols-2 gap-3 pt-2">
-                  <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-brand-500/30 transition-all">
-                    <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                      <span>Conversion Rate</span>
-                      <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <!-- Metrics & Features Grid -->
+                <div class="grid grid-cols-2 gap-3 pt-1">
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                    <div class="text-[11px] text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Tokens & Variables</span>
+                      <i data-lucide="layers" class="w-3.5 h-3.5 text-brand-400"></i>
                     </div>
-                    <div class="text-xl font-bold font-display text-white">4.82% <span class="text-xs text-emerald-400 font-sans font-medium">+2.1%</span></div>
-                    <div class="w-full bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
-                      <div class="bg-gradient-to-r from-brand-500 to-emerald-400 h-full w-[78%]"></div>
-                    </div>
+                    <div class="text-lg font-bold font-display text-white">100% Tokenized</div>
+                    <div class="text-[10px] text-slate-500 mt-0.5">Colors, Typography, Spacing</div>
                   </div>
 
-                  <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-brand-500/30 transition-all">
-                    <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-                      <span>Design Velocity</span>
-                      <i data-lucide="zap" class="w-3.5 h-3.5 text-brand-400"></i>
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">
+                    <div class="text-[11px] text-slate-400 mb-1 flex items-center justify-between">
+                      <span>Component States</span>
+                      <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
                     </div>
-                    <div class="text-xl font-bold font-display text-white">3.4x Faster</div>
-                    <div class="w-full bg-white/10 h-1.5 rounded-full mt-2 overflow-hidden">
-                      <div class="bg-gradient-to-r from-brand-500 to-purple-500 h-full w-[90%]"></div>
-                    </div>
+                    <div class="text-lg font-bold font-display text-white">Auto Layout 5.0</div>
+                    <div class="text-[10px] text-slate-500 mt-0.5">Interactive Variants & Micro-states</div>
                   </div>
                 </div>
 
-                <!-- Floating Interactive Badge -->
+                <!-- Direct Links Row inside Hero Card -->
                 <div class="p-3 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-between">
                   <div class="flex items-center gap-2.5">
                     <div class="w-8 h-8 rounded-lg bg-brand-500/20 flex items-center justify-center text-brand-300">
-                      <i data-lucide="sparkles" class="w-4 h-4"></i>
+                      <i data-lucide="figma" class="w-4 h-4"></i>
                     </div>
                     <div>
-                      <div class="text-xs font-semibold text-white">Crafted with Pixel Precision</div>
-                      <div class="text-[11px] text-slate-400">Figma, React, WebGL & Swift Ready</div>
+                      <div class="text-xs font-semibold text-white">Figma Community Creator</div>
+                      <div class="text-[11px] text-slate-400">Open source UI kits & templates</div>
                     </div>
                   </div>
-                  <button onclick="openCaseStudy(0)" class="text-xs font-semibold text-brand-300 hover:text-white transition-colors underline">View Case</button>
+                  <a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-300 hover:text-white transition-colors underline">@sobom ↗</a>
                 </div>
 
               </div>
@@ -328,81 +342,184 @@
     </div>
   </section>
 
-  <!-- Client Logos & Social Proof Marquee -->
-  <section class="py-12 border-y border-white/5 bg-[#080a0f]/50 overflow-hidden relative">
+  <!-- Community & Ecosystem Marquee -->
+  <section id="community" class="py-12 border-y border-white/5 bg-[#080a0f]/50 overflow-hidden relative">
     <div class="max-w-7xl mx-auto px-4 mb-6 text-center">
       <p class="text-xs uppercase tracking-[0.25em] font-mono text-slate-500 font-semibold">
-        Trusted by high-growth startups & visionaries worldwide
+        Explore my work & open-source kits across the design community
       </p>
     </div>
 
-    <!-- Infinite Scroll Marquee -->
+    <!-- Infinite Scroll Channel Ticker -->
     <div class="relative w-full overflow-hidden flex items-center">
       <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#07080B] to-transparent z-10 pointer-events-none"></div>
-      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#07080B] to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-l from-[#07080B] to-transparent z-10 pointer-events-none"></div>
       
       <div class="flex space-x-12 shrink-0 animate-marquee items-center whitespace-nowrap">
-        <!-- Brand 1 -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="layers" class="w-6 h-6 text-brand-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">SYNAPSE AI</span>
-        </div>
-        <!-- Brand 2 -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="shield-check" class="w-6 h-6 text-indigo-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">VAULT FINTECH</span>
-        </div>
-        <!-- Brand 3 -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="cpu" class="w-6 h-6 text-purple-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">AETHER LABS</span>
-        </div>
-        <!-- Brand 4 -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="activity" class="w-6 h-6 text-emerald-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">PULSE METRICS</span>
-        </div>
-        <!-- Brand 5 -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="box" class="w-6 h-6 text-amber-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">ORION COMMERCE</span>
-        </div>
-        <!-- Brand 6 -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="globe" class="w-6 h-6 text-blue-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">NEXUS GLOBAL</span>
-        </div>
+        <!-- Figma -->
+        <a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="figma" class="w-5 h-5 text-purple-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">FIGMA COMMUNITY @SOBOM</span>
+        </a>
+        <!-- Dribbble -->
+        <a href="https://dribbble.com/sobom" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="dribbble" class="w-5 h-5 text-pink-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">DRIBBLE @SOBOM</span>
+        </a>
+        <!-- Behance -->
+        <a href="https://www.behance.net/ssdharviya" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="globe" class="w-5 h-5 text-blue-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">BEHANCE @SSDHARVIYA</span>
+        </a>
+        <!-- WordPress Blog -->
+        <a href="https://shubhamdharviya.wordpress.com/author/shubhamdharviya/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="book-open" class="w-5 h-5 text-emerald-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">CASE STUDIES ARCHIVE</span>
+        </a>
+        <!-- Google Drive Resume -->
+        <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="file-text" class="w-5 h-5 text-amber-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">VERIFIED RESUME (PDF)</span>
+        </a>
 
-        <!-- Repeated for seamless loop -->
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="layers" class="w-6 h-6 text-brand-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">SYNAPSE AI</span>
-        </div>
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="shield-check" class="w-6 h-6 text-indigo-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">VAULT FINTECH</span>
-        </div>
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="cpu" class="w-6 h-6 text-purple-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">AETHER LABS</span>
-        </div>
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="activity" class="w-6 h-6 text-emerald-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">PULSE METRICS</span>
-        </div>
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="box" class="w-6 h-6 text-amber-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">ORION COMMERCE</span>
-        </div>
-        <div class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
-          <i data-lucide="globe" class="w-6 h-6 text-blue-400"></i>
-          <span class="font-display font-bold text-lg tracking-wider">NEXUS GLOBAL</span>
-        </div>
+        <!-- Repeat for seamless loop -->
+        <a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="figma" class="w-5 h-5 text-purple-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">FIGMA COMMUNITY @SOBOM</span>
+        </a>
+        <a href="https://dribbble.com/sobom" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="dribbble" class="w-5 h-5 text-pink-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">DRIBBLE @SOBOM</span>
+        </a>
+        <a href="https://www.behance.net/ssdharviya" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="globe" class="w-5 h-5 text-blue-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">BEHANCE @SSDHARVIYA</span>
+        </a>
+        <a href="https://shubhamdharviya.wordpress.com/author/shubhamdharviya/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="book-open" class="w-5 h-5 text-emerald-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">CASE STUDIES ARCHIVE</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+          <i data-lucide="file-text" class="w-5 h-5 text-amber-400"></i>
+          <span class="font-display font-bold text-base tracking-wider">VERIFIED RESUME (PDF)</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Selected Works Portfolio Section -->
+  <!-- Interactive Live Figma Prototypes Section -->
+  <section id="prototypes" class="py-24 relative z-10 bg-[#090b10] border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-400 text-xs font-mono mb-3">
+            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+            <span>INTERACTIVE FIGMA SUITE</span>
+          </div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+            Live Figma Prototypes
+          </h2>
+          <p class="text-slate-400 mt-2 max-w-xl text-base">
+            Click into these live, fully interactive prototypes to test real micro-interactions, components, and user flows designed by Shubham.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold text-xs flex items-center gap-2 transition-all">
+            <i data-lucide="figma" class="w-4 h-4"></i>
+            <span>Follow on Figma Community</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Featured Live Prototype Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Prototype 1: SSOT Design System -->
+        <div class="rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-6 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-white/10">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="SSOT Design System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-brand-500/80 text-white">DESIGN SYSTEM</span>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-white group-hover:text-brand-300 transition-colors">
+                SSOT: Single Source of Truth
+              </h3>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                Comprehensive multi-brand design tokens, atomic UI library, accessibility guidelines, and interactive layout components built for rapid scalability.
+              </p>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-mono">Figma · 244-959</span>
+            <a href="https://www.figma.com/proto/XHa7ODVhJDye4b4XUWby8q/SSOT?page-id=244%3A958&node-id=244-959&viewport=719%2C497%2C1.08&t=01vIUGtVsv91y9I3-1&scaling=scale-down-width&starting-point-node-id=244%3A959" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all flex items-center gap-1.5">
+              <span>Play Prototype</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Prototype 2: UI/UX 2023 Showcase (Node 1042-264) -->
+        <div class="rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-6 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-white/10">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="UI/UX Showcase 2023" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-purple-500/80 text-white">PORTFOLIO WALKTHROUGH</span>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-white group-hover:text-purple-300 transition-colors">
+                UI/UX 2023 Case Portfolio
+              </h3>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                Full-screen responsive portfolio prototype walking through Shubham's design thinking, research methodologies, problem statements, and final screen executions.
+              </p>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-mono">Figma · 1042-264</span>
+            <a href="https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=206%3A4&node-id=1042-264&viewport=385%2C349%2C0.02&t=rVSi37eiT0utpoVB-1&scaling=contain&content-scaling=responsive" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all flex items-center gap-1.5">
+              <span>Play Prototype</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Prototype 3: Interactive App Experience (Node 2602-39) -->
+        <div class="rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-6 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-white/10">
+              <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80" alt="Mobile App Flow" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#090b10] via-transparent to-transparent"></div>
+              <span class="absolute top-3 left-3 text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-500/80 text-white">MOBILE APP FLOW</span>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-white group-hover:text-emerald-300 transition-colors">
+                Native App User Flow Prototype
+              </h3>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed">
+                Tactile mobile app interaction flow testing screen transitions, gestures, floating action buttons, and frictionless confirmation states.
+              </p>
+            </div>
+          </div>
+          <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
+            <span class="text-xs text-slate-500 font-mono">Figma · 2602-39</span>
+            <a href="https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=2601%3A16114&node-id=2602-39&viewport=1044%2C446%2C0.08&t=wTkVOeGBxzJSc3Xe-1&scaling=contain&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all flex items-center gap-1.5">
+              <span>Play Prototype</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Selected Works & Case Studies Section -->
   <section id="work" class="py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -411,156 +528,123 @@
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-mono mb-3">
             <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
-            <span>PORTFOLIO SHOWCASE</span>
+            <span>AUTHENTIC CASE STUDIES</span>
           </div>
           <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Selected Works
           </h2>
           <p class="text-slate-400 mt-2 max-w-xl text-base">
-            A curated collection of digital interfaces, product redesigns, and high-impact web applications built by Sobom Creatives.
+            Detailed case studies across waitlist systems, fitness tracking, design systems, healthcare apps, and conversion redesigns.
           </p>
         </div>
 
-        <!-- Filter Buttons -->
+        <!-- Filter Categories -->
         <div class="flex items-center flex-wrap gap-2 p-1.5 rounded-2xl bg-white/[0.04] border border-white/10" id="portfolioFilterContainer">
-          <button data-filter="all" class="filter-btn active-filter px-4 py-2 rounded-xl text-xs font-semibold transition-all">All Projects</button>
-          <button data-filter="saas" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">SaaS & AI</button>
+          <button data-filter="all" class="filter-btn active-filter px-4 py-2 rounded-xl text-xs font-semibold transition-all">All Works</button>
+          <button data-filter="saas" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">SaaS & Web</button>
           <button data-filter="mobile" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">Mobile Apps</button>
-          <button data-filter="fintech" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">Fintech</button>
-          <button data-filter="web" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">Web Experiences</button>
+          <button data-filter="system" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">Design Systems</button>
+          <button data-filter="redesign" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white transition-all">Redesigns & CRO</button>
         </div>
       </div>
 
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
-        <!-- Rendered via JS dynamically with rich data & fallback in place -->
-      </div>
+      <!-- Case Studies Grid (Populated dynamically by main.js) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid"></div>
 
-      <!-- Bottom Portfolio Banner -->
-      <div class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-brand-900/30 via-slate-900 to-indigo-950/30 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <!-- Bottom Archive Callout -->
+      <div class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-brand-950/40 via-[#0d1017] to-purple-950/30 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-4">
           <div class="w-12 h-12 rounded-2xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center text-brand-300">
-            <i data-lucide="layers" class="w-6 h-6"></i>
+            <i data-lucide="book-open" class="w-6 h-6"></i>
           </div>
           <div>
-            <h4 class="text-lg font-bold text-white font-display">Need a tailored solution for your industry?</h4>
-            <p class="text-sm text-slate-400">We have designed over 40+ products across HealthTech, Web3, Logistics, and E-commerce.</p>
+            <h4 class="text-lg font-bold text-white font-display">Looking for written case study articles?</h4>
+            <p class="text-sm text-slate-400">Read in-depth design critiques and breakdown articles on my WordPress publication.</p>
           </div>
         </div>
-        <a href="#contact" class="px-6 py-3 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-semibold text-sm transition-all whitespace-nowrap">
-          Request Private Case Studies
+        <a href="https://shubhamdharviya.wordpress.com/author/shubhamdharviya/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-white text-slate-950 hover:bg-slate-200 font-semibold text-sm transition-all whitespace-nowrap flex items-center gap-2">
+          <span>Read on WordPress</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- Capabilities / Services Bento Grid -->
-  <section id="services" class="py-24 bg-[#090b10] relative z-10 border-t border-white/5">
+  <!-- Design Philosophy & Methodology -->
+  <section id="philosophy" class="py-24 bg-[#090b10] border-t border-white/5 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-400 text-xs font-mono">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-          <span>OUR CORE CAPABILITIES</span>
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+          <span>USER-FIRST METHODOLOGY</span>
         </div>
         <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-          Engineered for visual delight & relentless conversion.
+          How I turn messy problems into effortless experiences.
         </h2>
         <p class="text-slate-400 text-base">
-          From early-stage wireframe logic to production-grade design tokens, we build systems that scale effortlessly.
+          My 4-stage framework bridges business objectives, human psychology, and production-ready developer handoff.
         </p>
       </div>
 
-      <!-- Bento Grid Layout -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Bento 1: UI/UX & Digital Product Design (Wide) -->
-        <div class="md:col-span-2 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-8 transition-all group relative overflow-hidden">
-          <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl group-hover:bg-brand-500/20 transition-all pointer-events-none"></div>
-          <div class="flex items-start justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 group-hover:scale-110 transition-transform">
-              <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
-            </div>
-            <span class="text-xs font-mono text-slate-500">01 / PRODUCT</span>
+        <!-- Pillar 1 -->
+        <div class="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="search" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-2xl text-white mt-6 group-hover:text-brand-300 transition-colors">
-            UI/UX & Complex Web Platforms
+          <span class="text-xs font-mono text-slate-500">PHASE 01</span>
+          <h3 class="font-display font-bold text-xl text-white mt-1 group-hover:text-brand-300 transition-colors">
+            User Empathy & Research
           </h3>
-          <p class="text-slate-400 mt-2 text-sm max-w-lg leading-relaxed">
-            We transform messy business logic into intuitive, distraction-free software. User testing, information architecture, dashboard hierarchies, and frictionless workflows designed for scale.
+          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+            Understanding who uses the product and why. Persona mapping, journey mapping, task analysis, and uncovering the root friction points.
           </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">SaaS Dashboards</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Information Architecture</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">User Flow Mapping</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Usability Testing</span>
-          </div>
         </div>
 
-        <!-- Bento 2: Mobile Ecosystems -->
-        <div class="rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-8 transition-all group relative overflow-hidden">
-          <div class="flex items-start justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
-              <i data-lucide="smartphone" class="w-6 h-6"></i>
-            </div>
-            <span class="text-xs font-mono text-slate-500">02 / MOBILE</span>
+        <!-- Pillar 2 -->
+        <div class="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="git-branch" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-2xl text-white mt-6 group-hover:text-indigo-300 transition-colors">
-            Mobile App Ecosystems
+          <span class="text-xs font-mono text-slate-500">PHASE 02</span>
+          <h3 class="font-display font-bold text-xl text-white mt-1 group-hover:text-indigo-300 transition-colors">
+            Architecture & Logic
           </h3>
-          <p class="text-slate-400 mt-2 text-sm leading-relaxed">
-            Native iOS and Android ergonomics. Tactile haptic feedback cues, gesture-driven interfaces, and seamless onboarding flows that keep retention through the roof.
+          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+            Structuring the cognitive pathway. Low-fidelity wireframes, information hierarchies, click-through flows, and validating mental models early.
           </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">iOS Human Interface</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Material Design 3</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Haptics & Micro-Interactions</span>
-          </div>
         </div>
 
-        <!-- Bento 3: Design Systems & Tokens -->
-        <div class="rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-8 transition-all group relative overflow-hidden">
-          <div class="flex items-start justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
-              <i data-lucide="component" class="w-6 h-6"></i>
-            </div>
-            <span class="text-xs font-mono text-slate-500">03 / SYSTEMS</span>
+        <!-- Pillar 3 -->
+        <div class="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-2xl text-white mt-6 group-hover:text-purple-300 transition-colors">
-            Enterprise Design Systems
+          <span class="text-xs font-mono text-slate-500">PHASE 03</span>
+          <h3 class="font-display font-bold text-xl text-white mt-1 group-hover:text-purple-300 transition-colors">
+            Visual Craft & Tokens
           </h3>
-          <p class="text-slate-400 mt-2 text-sm leading-relaxed">
-            Tokenized Figma libraries mapped 1:1 to Tailwind, CSS Variables, and React component code. Stop rebuilding the wheel; ship features 3x faster.
+          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+            High-fidelity UI, typography scale, micro-interactions, Auto Layout 5.0, dark/light variants, and responsive viewport considerations.
           </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Figma Variables</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Design Tokens</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Accessibility (WCAG AAA)</span>
-          </div>
         </div>
 
-        <!-- Bento 4: Interactive Web & Creative Dev (Wide) -->
-        <div class="md:col-span-2 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 p-8 transition-all group relative overflow-hidden">
-          <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all pointer-events-none"></div>
-          <div class="flex items-start justify-between">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
-              <i data-lucide="code-2" class="w-6 h-6"></i>
-            </div>
-            <span class="text-xs font-mono text-slate-500">04 / CREATIVE DEV</span>
+        <!-- Pillar 4 -->
+        <div class="p-6 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/40 transition-all group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="layers" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-2xl text-white mt-6 group-hover:text-emerald-300 transition-colors">
-            Creative Development & Micro-Interactions
+          <span class="text-xs font-mono text-slate-500">PHASE 04</span>
+          <h3 class="font-display font-bold text-xl text-white mt-1 group-hover:text-emerald-300 transition-colors">
+            SSOT & Dev Handoff
           </h3>
-          <p class="text-slate-400 mt-2 text-sm max-w-lg leading-relaxed">
-            We bridge the gap between design vision and code. Fluid physics, WebGL visual hooks, Lenis smooth scrolling, and Next.js / Tailwind precision builds with 100/100 Lighthouse performance.
+          <p class="text-slate-400 text-xs mt-3 leading-relaxed">
+            Single Source of Truth tokens mapped to Tailwind / React, detailed component states (hover, active, disabled), and developer walkthroughs.
           </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Next.js & Tailwind</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">GSAP & Framer Motion</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Sub-second Load Times</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/5 text-slate-300">Fluid Responsive Layouts</span>
-          </div>
         </div>
 
       </div>
@@ -568,86 +652,93 @@
     </div>
   </section>
 
-  <!-- The Sobom 4-Phase Process -->
-  <section id="process" class="py-24 relative z-10">
+  <!-- About Shubham Dharaviya Section -->
+  <section id="about" class="py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-mono mb-3">
-            <i data-lucide="git-commit" class="w-3.5 h-3.5"></i>
-            <span>OUR METHODOLOGY</span>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- About Visual / Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-3xl bg-gradient-to-tr from-white/10 to-white/[0.02] p-1 border border-white/15 shadow-2xl overflow-hidden">
+            <div class="rounded-[22px] bg-[#0d1017] p-8 space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center font-display font-black text-2xl text-white shadow-xl shadow-brand-500/30">
+                  SD
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold font-display text-white">Shubham Dharaviya</h3>
+                  <p class="text-xs text-brand-300 font-mono">Product & UI/UX Designer</p>
+                  <p class="text-xs text-slate-400 mt-0.5">India · Remote Worldwide</p>
+                </div>
+              </div>
+
+              <!-- Quick Facts -->
+              <div class="space-y-3 pt-4 border-t border-white/10 text-xs text-slate-300">
+                <div class="flex items-center justify-between py-1 border-b border-white/5">
+                  <span class="text-slate-400">Core Focus:</span>
+                  <span class="font-semibold text-white">Product Design, Design Systems (SSOT)</span>
+                </div>
+                <div class="flex items-center justify-between py-1 border-b border-white/5">
+                  <span class="text-slate-400">Primary Tools:</span>
+                  <span class="font-semibold text-white">Figma, FigJam, Tokens Studio, Miro</span>
+                </div>
+                <div class="flex items-center justify-between py-1 border-b border-white/5">
+                  <span class="text-slate-400">Frontend Understanding:</span>
+                  <span class="font-semibold text-white">HTML, CSS, Tailwind, Responsive Web</span>
+                </div>
+                <div class="flex items-center justify-between py-1 border-b border-white/5">
+                  <span class="text-slate-400">Availability:</span>
+                  <span class="font-semibold text-emerald-400 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Open for Roles
+                  </span>
+                </div>
+              </div>
+
+              <!-- Resume Button -->
+              <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition-all flex items-center justify-center gap-2">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Download Verified Resume</span>
+              </a>
+
+            </div>
           </div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-            The 4-Phase Delivery Framework
+        </div>
+
+        <!-- About Text Info -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-mono">
+            <i data-lucide="user" class="w-3.5 h-3.5"></i>
+            <span>BACKGROUND & DRIVE</span>
+          </div>
+
+          <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+            Design grounded in user psychology, not personal bias.
           </h2>
-          <p class="text-slate-400 mt-2 max-w-xl text-base">
-            No endless revision loops or vague milestones. A predictable sprint framework engineered for rapid deployment.
-          </p>
-        </div>
-        <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
-          <i data-lucide="clock" class="w-4 h-4 text-brand-400"></i>
-          <span>Average Project Turnaround: 3 to 6 Weeks</span>
-        </div>
-      </div>
 
-      <!-- Process Steps Container -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-        
-        <!-- Step 1 -->
-        <div class="process-card p-6 rounded-3xl bg-white/[0.02] border border-white/10 relative hover:border-brand-500/40 transition-all group">
-          <div class="text-5xl font-display font-black text-white/10 group-hover:text-brand-500/30 transition-colors">01</div>
-          <h4 class="font-display font-bold text-xl text-white mt-4">Discover & Architecture</h4>
-          <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-            We immerse ourselves in your product data, competitor analysis, customer personas, and strategic objectives.
+          <p class="text-slate-300 text-base leading-relaxed">
+            I am a product designer driven by a single guiding compass: <span class="text-white font-semibold">"It doesn't matter what you & I think. It only matters what our user thinks."</span>
           </p>
-          <div class="mt-4 pt-4 border-t border-white/5 text-[11px] text-slate-400 space-y-1.5 font-mono">
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-brand-400"></i> Persona Mapping</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-brand-400"></i> Product Architecture</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-brand-400"></i> Competitor Benchmark</div>
-          </div>
-        </div>
 
-        <!-- Step 2 -->
-        <div class="process-card p-6 rounded-3xl bg-white/[0.02] border border-white/10 relative hover:border-brand-500/40 transition-all group">
-          <div class="text-5xl font-display font-black text-white/10 group-hover:text-indigo-500/30 transition-colors">02</div>
-          <h4 class="font-display font-bold text-xl text-white mt-4">Wireframe & UX Logic</h4>
-          <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-            Low-fidelity interactive prototypes to validate conversion pathways, edge cases, and screen workflows early.
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Over the past 4+ years, I have architected digital products ranging from hospitality waitlist management software (Kyobee) and mobile fitness tracking tools (MSfitCentre) to comprehensive enterprise design systems (SSOT). I don't just create pretty mockups — I construct scalable component tokens that engineering teams can build without ambiguity.
           </p>
-          <div class="mt-4 pt-4 border-t border-white/5 text-[11px] text-slate-400 space-y-1.5 font-mono">
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-indigo-400"></i> Frictionless User Flows</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-indigo-400"></i> Clickable Wireframes</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-indigo-400"></i> Feedback Sprint</div>
-          </div>
-        </div>
 
-        <!-- Step 3 -->
-        <div class="process-card p-6 rounded-3xl bg-white/[0.02] border border-white/10 relative hover:border-brand-500/40 transition-all group">
-          <div class="text-5xl font-display font-black text-white/10 group-hover:text-purple-500/30 transition-colors">03</div>
-          <h4 class="font-display font-bold text-xl text-white mt-4">Visual Craft & Polish</h4>
-          <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-            High-fidelity UI, typography mastery, custom iconography, micro-animations, and responsive viewport fidelity.
-          </p>
-          <div class="mt-4 pt-4 border-t border-white/5 text-[11px] text-slate-400 space-y-1.5 font-mono">
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-purple-400"></i> High-Fidelity Figma</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-purple-400"></i> Micro-Interactions</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-purple-400"></i> Motion Choreography</div>
+          <!-- Skills Badges -->
+          <div class="pt-4 space-y-3">
+            <h4 class="text-xs uppercase font-mono tracking-wider text-slate-400 font-semibold">Core Proficiencies:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">Design Systems (SSOT)</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">User Interface (UI)</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">User Experience (UX)</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">Interactive Prototyping</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">Mobile App Ergonomics</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">Conversion Rate Optimization</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">Auto Layout 5.0</span>
+              <span class="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-200">Developer Handoff</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Step 4 -->
-        <div class="process-card p-6 rounded-3xl bg-white/[0.02] border border-white/10 relative hover:border-brand-500/40 transition-all group">
-          <div class="text-5xl font-display font-black text-white/10 group-hover:text-emerald-500/30 transition-colors">04</div>
-          <h4 class="font-display font-bold text-xl text-white mt-4">Design Token & Handoff</h4>
-          <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-            Clean developer documentation, component states, auto-layout tokens, and launch QA support with your engineers.
-          </p>
-          <div class="mt-4 pt-4 border-t border-white/5 text-[11px] text-slate-400 space-y-1.5 font-mono">
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Production Tokens</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> Dev Video Walkthrough</div>
-            <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i> 14-Day Post-Launch QA</div>
-          </div>
         </div>
 
       </div>
@@ -655,409 +746,97 @@
     </div>
   </section>
 
-  <!-- Interactive Project Cost & Scope Estimator -->
-  <section id="estimator" class="py-24 bg-gradient-to-b from-[#090b10] via-[#0b0e17] to-[#08090d] border-y border-white/5 relative z-10">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-400 text-xs font-mono">
-          <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
-          <span>TRANSPARENT PRICING CALCULATOR</span>
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-          Estimate Your Investment in Seconds
-        </h2>
-        <p class="text-slate-400 text-sm">
-          Select your requirements below to instantly see estimated timelines, deliverables, and investment tiers.
-        </p>
-      </div>
-
-      <!-- Estimator Box -->
-      <div class="rounded-3xl bg-white/[0.02] border border-white/10 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
-        
-        <!-- Step 1: Project Type -->
-        <div class="mb-8">
-          <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
-            1. Select Primary Objective:
-          </label>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="calcProjectType">
-            <button type="button" data-type="web" data-cost="4500" data-weeks="3" class="estimator-option active-est p-4 rounded-2xl border text-left transition-all">
-              <i data-lucide="globe" class="w-5 h-5 text-brand-400 mb-2"></i>
-              <div class="font-bold text-sm text-white">Web App / SaaS</div>
-              <div class="text-[11px] text-slate-400 mt-1">Full dashboard & portal</div>
-            </button>
-            <button type="button" data-type="mobile" data-cost="5500" data-weeks="4" class="estimator-option p-4 rounded-2xl border text-left transition-all">
-              <i data-lucide="smartphone" class="w-5 h-5 text-indigo-400 mb-2"></i>
-              <div class="font-bold text-sm text-white">Mobile iOS/Android</div>
-              <div class="text-[11px] text-slate-400 mt-1">Native gesture app</div>
-            </button>
-            <button type="button" data-type="landing" data-cost="3200" data-weeks="2" class="estimator-option p-4 rounded-2xl border text-left transition-all">
-              <i data-lucide="sparkles" class="w-5 h-5 text-purple-400 mb-2"></i>
-              <div class="font-bold text-sm text-white">Marketing Experience</div>
-              <div class="text-[11px] text-slate-400 mt-1">High conversion site</div>
-            </button>
-            <button type="button" data-type="system" data-cost="6500" data-weeks="5" class="estimator-option p-4 rounded-2xl border text-left transition-all">
-              <i data-lucide="component" class="w-5 h-5 text-emerald-400 mb-2"></i>
-              <div class="font-bold text-sm text-white">Design System & MVP</div>
-              <div class="text-[11px] text-slate-400 mt-1">Scale ready foundation</div>
-            </button>
-          </div>
-        </div>
-
-        <!-- Step 2: Complexity / Scope Size -->
-        <div class="mb-8">
-          <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
-            2. Scope Scale:
-          </label>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="calcScopeScale">
-            <button type="button" data-scale="mvp" data-multiplier="1" class="estimator-scale active-scale p-4 rounded-2xl border text-left transition-all">
-              <div class="font-bold text-sm text-white">Early Stage MVP</div>
-              <div class="text-xs text-slate-400 mt-1">Core screens, essential user journeys, speed to market.</div>
-            </button>
-            <button type="button" data-scale="growth" data-multiplier="1.6" class="estimator-scale p-4 rounded-2xl border text-left transition-all">
-              <div class="font-bold text-sm text-white">Growth & Scaling</div>
-              <div class="text-xs text-slate-400 mt-1">Comprehensive feature set, micro-interactions, responsive states.</div>
-            </button>
-            <button type="button" data-scale="enterprise" data-multiplier="2.4" class="estimator-scale p-4 rounded-2xl border text-left transition-all">
-              <div class="font-bold text-sm text-white">Enterprise Ecosystem</div>
-              <div class="text-xs text-slate-400 mt-1">Full design tokens, multi-tenant roles, advanced analytics, handoff QA.</div>
-            </button>
-          </div>
-        </div>
-
-        <!-- Step 3: Add-on Capabilities -->
-        <div class="mb-8">
-          <label class="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">
-            3. Optional Add-ons (Select all that apply):
-          </label>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="calcAddons">
-            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 cursor-pointer hover:border-brand-500/30 transition-all">
-              <input type="checkbox" data-addon="motion" data-addon-cost="1200" class="addon-checkbox rounded border-white/20 text-brand-500 focus:ring-brand-500">
-              <div>
-                <div class="text-xs font-bold text-white">Custom Motion & Micro-UI</div>
-                <div class="text-[11px] text-slate-400">+$1,200</div>
-              </div>
-            </label>
-            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 cursor-pointer hover:border-brand-500/30 transition-all">
-              <input type="checkbox" data-addon="brand" data-addon-cost="1800" class="addon-checkbox rounded border-white/20 text-brand-500 focus:ring-brand-500">
-              <div>
-                <div class="text-xs font-bold text-white">Brand Identity & Style Guide</div>
-                <div class="text-[11px] text-slate-400">+$1,800</div>
-              </div>
-            </label>
-            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 cursor-pointer hover:border-brand-500/30 transition-all">
-              <input type="checkbox" data-addon="frontend" data-addon-cost="2800" class="addon-checkbox rounded border-white/20 text-brand-500 focus:ring-brand-500">
-              <div>
-                <div class="text-xs font-bold text-white">Production Tailwind / React Code</div>
-                <div class="text-[11px] text-slate-400">+$2,800</div>
-              </div>
-            </label>
-          </div>
-        </div>
-
-        <!-- Real-time Estimate Calculation Bar -->
-        <div class="p-6 rounded-2xl bg-gradient-to-r from-brand-950/60 via-[#0d111a] to-slate-900 border border-brand-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="space-y-1 text-center md:text-left">
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Estimated Project Budget & Speed</div>
-            <div class="flex items-baseline gap-2">
-              <span class="text-3xl sm:text-4xl font-display font-black text-white" id="estimateCostDisplay">$4,500</span>
-              <span class="text-xs text-brand-300 font-mono" id="estimateWeeksDisplay">~ 3 Weeks Turnaround</span>
-            </div>
-            <p class="text-[11px] text-slate-400">Includes Figma master files, unlimited sprint iterations, design tokens, and launch support.</p>
-          </div>
-
-          <button id="bookEstimatedScopeBtn" class="w-full md:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-500 to-indigo-600 hover:from-brand-400 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-brand-500/30 transition-all whitespace-nowrap flex items-center justify-center gap-2">
-            <span>Lock In This Scope</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </button>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Client Testimonials & Social Proof -->
-  <section id="testimonials" class="py-24 relative z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-mono">
-          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
-          <span>TESTIMONIALS & RESULTS</span>
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-          What founders say about Sobom Creatives
-        </h2>
-        <p class="text-slate-400 text-sm">
-          Don't just take our word for it. Here is the feedback from team leads and startup founders we have collaborated with.
-        </p>
-      </div>
-
-      <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Card 1 -->
-        <div class="testimonial-card p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/30 transition-all flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-400 gap-1 mb-4">
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed italic">
-              "Sobom Creatives took our rough wireframes and turned them into an Apple-grade web application. Within two weeks of launching our new UI, our demo-to-signup conversion jumped by 140%. They are an indispensable design partner."
-            </p>
-          </div>
-          <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah Lin" class="w-10 h-10 rounded-full object-cover border border-brand-400/30">
-            <div>
-              <div class="font-bold text-sm text-white">Sarah Lin</div>
-              <div class="text-xs text-slate-400">Co-Founder & CEO, Synapse AI</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testimonial-card p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/30 transition-all flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-400 gap-1 mb-4">
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed italic">
-              "Finding a design team that understands both complex backend systems and cutting-edge visual aesthetics is rare. Sobom Creatives delivered our Figma design system and mobile apps two weeks ahead of schedule."
-            </p>
-          </div>
-          <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Vance" class="w-10 h-10 rounded-full object-cover border border-brand-400/30">
-            <div>
-              <div class="font-bold text-sm text-white">Marcus Vance</div>
-              <div class="text-xs text-slate-400">VP Product, Vault Financial</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="testimonial-card p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-brand-500/30 transition-all flex flex-col justify-between">
-          <div>
-            <div class="flex text-amber-400 gap-1 mb-4">
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed italic">
-              "Their design kits and templates on Dribbble and UI4Free were already legendary in the community. Hiring them directly for our mobile health ecosystem was the best product investment we made all year."
-            </p>
-          </div>
-          <div class="mt-6 pt-6 border-t border-white/10 flex items-center gap-3">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="w-10 h-10 rounded-full object-cover border border-brand-400/30">
-            <div>
-              <div class="font-bold text-sm text-white">Elena Rostova</div>
-              <div class="text-xs text-slate-400">Head of Growth, Pulse Health</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQ Accordion Section -->
-  <section id="faq" class="py-24 bg-[#090b10] border-t border-white/5 relative z-10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-400 text-xs font-mono">
-          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-          <span>FREQUENTLY ASKED QUESTIONS</span>
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
-          Everything you need to know
-        </h2>
-      </div>
-
-      <!-- Accordion Items -->
-      <div class="space-y-4" id="faqAccordion">
-        
-        <div class="faq-item rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden transition-all">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-display font-bold text-lg text-white hover:text-brand-300 transition-colors">
-            <span>What deliverables do you provide at the end of a project?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-slate-400"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">
-            You receive fully organized, auto-layout Figma source files, interactive prototypes, documented component design tokens (colors, typography, spacing, shadows), exported production assets (SVGs, PNGs, Lottie/JSON animations), and optionally clean Tailwind CSS / React code.
-          </div>
-        </div>
-
-        <div class="faq-item rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden transition-all">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-display font-bold text-lg text-white hover:text-brand-300 transition-colors">
-            <span>How fast can we kick off a new engagement?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-slate-400"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">
-            Typically within 3 to 5 business days after our discovery call and agreement sign-off. We purposefully limit our active client roster to 3 concurrent partners so each project receives dedicated, senior-level attention.
-          </div>
-        </div>
-
-        <div class="faq-item rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden transition-all">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-display font-bold text-lg text-white hover:text-brand-300 transition-colors">
-            <span>Do you also write production frontend code?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-slate-400"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">
-            Yes! While design is our core craft, we offer creative frontend engineering services using Next.js, React, Tailwind CSS, TypeScript, and Framer Motion. We ensure your designs render in browser with 100% pixel fidelity.
-          </div>
-        </div>
-
-        <div class="faq-item rounded-2xl bg-white/[0.02] border border-white/10 overflow-hidden transition-all">
-          <button class="faq-btn w-full p-6 text-left flex items-center justify-between font-display font-bold text-lg text-white hover:text-brand-300 transition-colors">
-            <span>How do revisions and communication work?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 text-slate-400"></i>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed border-t border-white/5 pt-4">
-            We operate via a private Slack or Discord channel with your team, alongside async Loom video walkthroughs and weekly Figma live reviews. We iterate in rapid sprints, meaning feedback is integrated within 24 to 48 hours.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact & Discovery Form Section -->
-  <section id="contact" class="py-24 relative z-10">
+  <!-- Contact & Collaboration Section -->
+  <section id="contact" class="py-24 relative z-10 bg-[#090b10] border-t border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="rounded-[36px] bg-gradient-to-tr from-brand-950/80 via-[#0d1017] to-purple-950/40 border border-white/15 p-8 sm:p-14 relative overflow-hidden shadow-2xl">
         
-        <!-- Decorative Ambient Light -->
-        <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
           
-          <!-- Contact Left Column -->
+          <!-- Contact Left Info -->
           <div class="lg:col-span-5 space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-500/40 text-brand-300 text-xs font-mono">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-              <span>LET'S BUILD SOMETHING ICONIC</span>
+              <span>GET IN TOUCH</span>
             </div>
 
             <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
-              Have an ambitious project in mind?
+              Let's create something remarkable together.
             </h2>
 
             <p class="text-slate-300 text-base leading-relaxed">
-              Tell us about your product goals, timeline, and vision. We'll review your inquiry and respond within 24 hours with an actionable roadmap.
+              Whether you are looking to hire a senior product designer, need an SSOT design system built, or want to discuss a new digital venture, my inbox is always open.
             </p>
 
-            <!-- Direct Contact Links -->
             <div class="pt-6 space-y-4 border-t border-white/10 text-sm text-slate-300">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-400">
                   <i data-lucide="mail" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-slate-400">Direct Inquiries</div>
-                  <a href="mailto:hello@sobomcreatives.com" class="font-semibold text-white hover:text-brand-300 transition-colors">hello@sobomcreatives.com</a>
+                  <div class="text-xs text-slate-400">Email Me Directly</div>
+                  <a href="mailto:dharaviyashubham2000@gmail.com" class="font-semibold text-white hover:text-brand-300 transition-colors">
+                    dharaviyashubham2000@gmail.com
+                  </a>
                 </div>
               </div>
 
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-purple-400">
-                  <i data-lucide="calendar" class="w-5 h-5"></i>
+                  <i data-lucide="file-text" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-slate-400">Prefer a live conversation?</div>
-                  <a href="#contact" class="font-semibold text-white hover:text-brand-300 transition-colors">Schedule a 20-min Discovery Call</a>
+                  <div class="text-xs text-slate-400">Official Resume</div>
+                  <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-brand-300 transition-colors flex items-center gap-1">
+                    <span>View PDF on Google Drive</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  </a>
                 </div>
               </div>
 
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400">
-                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-pink-400">
+                  <i data-lucide="dribbble" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-slate-400">Location</div>
-                  <span class="font-semibold text-white">Global Remote Studio · Tokyo / London / SF</span>
+                  <div class="text-xs text-slate-400">Creative Hubs</div>
+                  <span class="font-semibold text-white">Figma @sobom · Dribbble @sobom · Behance</span>
                 </div>
               </div>
             </div>
 
           </div>
 
-          <!-- Contact Form Right Column -->
+          <!-- Contact Form -->
           <div class="lg:col-span-7">
-            <form id="projectInquiryForm" class="p-8 rounded-3xl bg-white/[0.03] border border-white/10 space-y-6 backdrop-blur-md">
+            <form id="contactForm" class="p-8 rounded-3xl bg-white/[0.03] border border-white/10 space-y-6 backdrop-blur-md">
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Your Name *</label>
-                  <input type="text" id="formName" required placeholder="Alexander Wright" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm">
+                  <input type="text" id="contactName" required placeholder="Alex Turner" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm">
                 </div>
                 <div>
-                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Work Email *</label>
-                  <input type="email" id="formEmail" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm">
+                  <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Your Email *</label>
+                  <input type="email" id="contactEmail" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm">
                 </div>
               </div>
 
               <div>
-                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Company / Project Name</label>
-                <input type="text" id="formCompany" placeholder="Apex Labs Inc." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm">
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Project Subject / Opportunity</label>
+                <input type="text" id="contactSubject" placeholder="Product Design Opportunity / Design System Sprint" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm">
               </div>
 
               <div>
-                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Service Interests</label>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="serviceCheckboxGroup">
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white/5 border border-white/5 text-xs text-slate-300 cursor-pointer hover:bg-white/10 transition-all">
-                    <input type="checkbox" name="services" value="UI/UX Design" checked class="rounded border-white/20 text-brand-500">
-                    <span>UI/UX Design</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white/5 border border-white/5 text-xs text-slate-300 cursor-pointer hover:bg-white/10 transition-all">
-                    <input type="checkbox" name="services" value="Mobile App" class="rounded border-white/20 text-brand-500">
-                    <span>Mobile App</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white/5 border border-white/5 text-xs text-slate-300 cursor-pointer hover:bg-white/10 transition-all">
-                    <input type="checkbox" name="services" value="Design System" class="rounded border-white/20 text-brand-500">
-                    <span>Design System</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white/5 border border-white/5 text-xs text-slate-300 cursor-pointer hover:bg-white/10 transition-all">
-                    <input type="checkbox" name="services" value="Web Platform" class="rounded border-white/20 text-brand-500">
-                    <span>Web Platform</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white/5 border border-white/5 text-xs text-slate-300 cursor-pointer hover:bg-white/10 transition-all">
-                    <input type="checkbox" name="services" value="Frontend Code" class="rounded border-white/20 text-brand-500">
-                    <span>Frontend Code</span>
-                  </label>
-                  <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white/5 border border-white/5 text-xs text-slate-300 cursor-pointer hover:bg-white/10 transition-all">
-                    <input type="checkbox" name="services" value="Brand Identity" class="rounded border-white/20 text-brand-500">
-                    <span>Brand Identity</span>
-                  </label>
-                </div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Message *</label>
+                <textarea id="contactMessage" rows="4" required placeholder="Tell me about your product, role details, or timeline..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm resize-none"></textarea>
               </div>
 
-              <div>
-                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Project Brief & Goals *</label>
-                <textarea id="formBrief" rows="4" required placeholder="Tell us about the challenge, target audience, and what success looks like for this product..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all text-sm resize-none"></textarea>
-              </div>
-
-              <button type="submit" id="submitInquiryBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 hover:from-brand-400 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-brand-500/25 transition-all flex items-center justify-center gap-2 group">
-                <span>Send Project Inquiry</span>
+              <button type="submit" id="contactSubmitBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-indigo-600 hover:from-brand-400 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-brand-500/25 transition-all flex items-center justify-center gap-2 group">
+                <span>Send Message</span>
                 <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
               </button>
-
-              <p class="text-center text-xs text-slate-500">
-                🔒 Strict confidentiality guaranteed. Mutual NDA available upon request.
-              </p>
 
             </form>
           </div>
@@ -1069,30 +848,25 @@
     </div>
   </section>
 
-  <!-- Interactive Case Study Modal -->
+  <!-- Interactive Deep-Dive Case Study Modal -->
   <div id="caseStudyModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300">
     <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#0d1017] border border-white/15 p-6 sm:p-10 shadow-2xl space-y-6">
-      
-      <!-- Close Button -->
       <button onclick="closeCaseStudy()" class="absolute top-6 right-6 p-2 rounded-full bg-white/10 text-slate-400 hover:text-white hover:bg-white/20 transition-all" aria-label="Close modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-
-      <!-- Modal Content Populated dynamically by JS -->
       <div id="modalContentContainer"></div>
-
     </div>
   </div>
 
-  <!-- Inquiry Confirmation Modal -->
+  <!-- Message Sent Confirmation Modal -->
   <div id="confirmationModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300">
     <div class="relative w-full max-w-md rounded-3xl bg-[#0d1017] border border-brand-500/40 p-8 shadow-2xl text-center space-y-4">
       <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 mx-auto flex items-center justify-center">
         <i data-lucide="check-circle" class="w-8 h-8"></i>
       </div>
-      <h3 class="font-display font-bold text-2xl text-white">Inquiry Received!</h3>
+      <h3 class="font-display font-bold text-2xl text-white">Message Dispatched!</h3>
       <p class="text-sm text-slate-300 leading-relaxed" id="confirmationText">
-        Thank you for reaching out to Sobom Creatives. Our design team will review your project brief and reply within 24 hours.
+        Thank you for reaching out. Shubham will review your note and reply to your email within 24 hours.
       </p>
       <button onclick="closeConfirmationModal()" class="w-full py-3 rounded-xl bg-white text-slate-950 font-bold text-sm hover:bg-slate-200 transition-all">
         Close Window
@@ -1106,84 +880,70 @@
       
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/10">
         
-        <!-- Studio Brand Info -->
+        <!-- Creator Info -->
         <div class="md:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent p-[1px]">
               <div class="w-full h-full bg-[#090b11] rounded-[11px] flex items-center justify-center font-display font-bold text-white">S</div>
             </div>
-            <span class="font-display font-bold text-xl text-white">SOBOM CREATIVES</span>
+            <span class="font-display font-bold text-xl text-white">Shubham Dharaviya (Sobom)</span>
           </div>
           <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
-            Elevating digital products through rigorous UI/UX architecture, brand distinction, and high-conversion aesthetic craft.
+            "It doesn't matter what you & I think. It only matters what our user thinks."
           </p>
           <div class="flex items-center space-x-3 text-slate-400 pt-2">
-            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-brand-500/20 transition-all" title="Dribbble">
+            <a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-purple-500/20 transition-all" title="Figma @sobom">
+              <i data-lucide="figma" class="w-4 h-4"></i>
+            </a>
+            <a href="https://dribbble.com/sobom" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-pink-500/20 transition-all" title="Dribbble @sobom">
               <i data-lucide="dribbble" class="w-4 h-4"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-brand-500/20 transition-all" title="Twitter / X">
-              <i data-lucide="twitter" class="w-4 h-4"></i>
+            <a href="https://www.behance.net/ssdharviya" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-blue-500/20 transition-all" title="Behance @ssdharviya">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-brand-500/20 transition-all" title="GitHub">
-              <i data-lucide="github" class="w-4 h-4"></i>
+            <a href="https://shubhamdharviya.wordpress.com/author/shubhamdharviya/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-emerald-500/20 transition-all" title="WordPress Blog">
+              <i data-lucide="book-open" class="w-4 h-4"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-brand-500/20 transition-all" title="LinkedIn">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-brand-500/20 transition-all" title="Instagram">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+            <a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-white/5 hover:text-white hover:bg-amber-500/20 transition-all" title="Google Drive Resume">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <!-- Quick Navigation Links -->
-        <div class="md:col-span-2 space-y-3">
-          <div class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold">Studio</div>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="#work" class="hover:text-white transition-colors">Selected Work</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Capabilities</a></li>
-            <li><a href="#process" class="hover:text-white transition-colors">Our Process</a></li>
-            <li><a href="#estimator" class="hover:text-white transition-colors">Price Estimator</a></li>
-          </ul>
-        </div>
-
-        <!-- Resources & Community -->
-        <div class="md:col-span-2 space-y-3">
-          <div class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold">Community</div>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="https://dribbble.com" class="hover:text-white transition-colors">Dribbble Portfolio</a></li>
-            <li><a href="https://ui4free.com" class="hover:text-white transition-colors">Free UI Kits</a></li>
-            <li><a href="#faq" class="hover:text-white transition-colors">Client FAQ</a></li>
-            <li><a href="#contact" class="hover:text-white transition-colors">Book Discovery Call</a></li>
-          </ul>
-        </div>
-
-        <!-- Studio Availability Card -->
+        <!-- Navigation Links -->
         <div class="md:col-span-3 space-y-3">
-          <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/10 space-y-3">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="text-xs font-bold text-white">Q1/Q2 Availability</span>
-            </div>
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Accepting 2 new product design engagements. Reserve your sprint slot today.
-            </p>
-            <a href="#contact" class="block text-center py-2 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-all">
-              Claim Studio Slot
-            </a>
-          </div>
+          <div class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold">Prototypes & Work</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="https://www.figma.com/proto/XHa7ODVhJDye4b4XUWby8q/SSOT?page-id=244%3A958&node-id=244-959&viewport=719%2C497%2C1.08&t=01vIUGtVsv91y9I3-1&scaling=scale-down-width&starting-point-node-id=244%3A959" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">SSOT Design System ↗</a></li>
+            <li><a href="https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=206%3A4&node-id=1042-264&viewport=385%2C349%2C0.02&t=rVSi37eiT0utpoVB-1&scaling=contain&content-scaling=responsive" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">UI/UX 2023 Showcase ↗</a></li>
+            <li><a href="https://www.figma.com/proto/10zJuZX9eox8CZ6y24J3QL/Shubham-Dharviya-UI-UX_2023?page-id=2601%3A16114&node-id=2602-39&viewport=1044%2C446%2C0.08&t=wTkVOeGBxzJSc3Xe-1&scaling=contain&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Mobile App Prototype ↗</a></li>
+            <li><a href="https://shubhamdharviya.wordpress.com/author/shubhamdharviya/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">WordPress Case Studies ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Community Links -->
+        <div class="md:col-span-4 space-y-3">
+          <div class="text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold">Direct Contact & Channels</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="mailto:dharaviyashubham2000@gmail.com" class="hover:text-white transition-colors">dharaviyashubham2000@gmail.com</a></li>
+            <li><a href="https://www.figma.com/@sobom" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">figma.com/@sobom</a></li>
+            <li><a href="https://dribbble.com/sobom" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">dribbble.com/sobom</a></li>
+            <li><a href="https://www.behance.net/ssdharviya" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">behance.net/ssdharviya</a></li>
+            <li><a href="https://drive.google.com/file/d/1u3YgdBHfaEqBE8d94AArBJfU6R4ukySe/view" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors font-semibold text-brand-300">Download Resume PDF ↗</a></li>
+          </ul>
         </div>
 
       </div>
 
-      <!-- Copyright & Bottom Bar -->
+      <!-- Copyright -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
         <div>
-          © 2027 Sobom Creatives. All rights reserved. Crafted for visionary digital experiences.
+          © 2027 Shubham Dharaviya (Sobom). All rights reserved.
         </div>
         <div class="flex items-center space-x-6">
-          <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
-          <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="#work" class="hover:text-slate-400 transition-colors">Works</a>
+          <a href="#prototypes" class="hover:text-slate-400 transition-colors">Prototypes</a>
+          <a href="#about" class="hover:text-slate-400 transition-colors">About</a>
           <a href="#" class="hover:text-slate-400 transition-colors">Back to top ↑</a>
         </div>
       </div>
